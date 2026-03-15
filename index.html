@@ -1,0 +1,1035 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Bankinter x Appian | Storyline anual</title>
+    <meta
+      name="description"
+      content="Prototipo scrollytelling con reveal.js para contar el storyline anual del proyecto Appian en Bankinter."
+    />
+    <link rel="icon" type="image/png" href="./assets/bankinter-wordmark-official.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="brand-strip" aria-label="Logos de Bankinter y NTT DATA">
+      <img
+        src="./assets/bankinter-wordmark-official.png"
+        alt="Bankinter"
+        class="brand-logo brand-logo--bankinter"
+      />
+      <span class="brand-divider" aria-hidden="true"></span>
+      <img
+        src="./assets/ntt-data-wordmark.svg"
+        alt="NTT DATA"
+        class="brand-logo brand-logo--ntt"
+      />
+    </header>
+
+    <aside class="story-rail" aria-label="Progreso del storyline">
+      <button
+        class="story-rail__dot is-active"
+        data-slide-target="s01-portada"
+        type="button"
+        aria-label="Ir a S01 Portada"
+        title="S01"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s03-resumen"
+        type="button"
+        aria-label="Ir a S03 Resumen"
+        title="S03"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s04-evolucion"
+        type="button"
+        aria-label="Ir a S04 Revenue"
+        title="S04"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s05-organizacion"
+        type="button"
+        aria-label="Ir a S05 Organizacion"
+        title="S05"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s06-q2"
+        type="button"
+        aria-label="Ir a S06 Q2"
+        title="S06"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s07-q3"
+        type="button"
+        aria-label="Ir a S07 Q3"
+        title="S07"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s08-q4"
+        type="button"
+        aria-label="Ir a S08 Q4"
+        title="S08"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s09-stakeholders"
+        type="button"
+        aria-label="Ir a S09 Stakeholders"
+        title="S09"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s10-equipo"
+        type="button"
+        aria-label="Ir a S10 Equipo"
+        title="S10"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s11-cierre"
+        type="button"
+        aria-label="Ir a S11 Cierre"
+        title="S11"
+      ></button>
+      <button
+        class="story-rail__dot"
+        data-slide-target="s12-equipo-completo"
+        type="button"
+        aria-label="Ir a S12 Equipo completo"
+        title="S12"
+      ></button>
+    </aside>
+
+    <div class="prototype-note">Bankinter · Appian</div>
+
+    <div class="reveal">
+      <div class="slides">
+        <section
+          id="s01-portada"
+          class="deck-slide hero-slide animate-section"
+          data-rail="intro"
+          data-slide-ref="S01"
+          data-slide-label="Portada"
+        >
+          <div class="slide-frame">
+            <div class="ambient ambient--orange" aria-hidden="true"></div>
+            <div class="ambient ambient--blue" aria-hidden="true"></div>
+            <div class="hero-layout">
+              <div class="hero-copy">
+                <p class="eyebrow">Bankinter · Appian · Storyline 2025</p>
+                <h1>Bankinter Appian</h1>
+                <p class="lead">
+                  De Iniciativa estable en RPA, a combinar RPA, Appian, IA y temas de
+                  gesti&oacute;n en transformaci&oacute;n de procesos.
+                </p>
+
+                <div class="pill-row">
+                  <div class="stat-pill fragment fade-up">
+                    <strong class="count-up" data-count-to="15" data-count-prefix="+">+0</strong>
+                    <span>procesos Appian desplegados</span>
+                  </div>
+                  <div class="stat-pill fragment fade-up">
+                    <strong class="count-up" data-count-to="2" data-count-prefix="+">+0</strong>
+                    <span>nuevos directores implicados</span>
+                  </div>
+                  <div class="stat-pill fragment fade-up">
+                    <strong class="count-up" data-count-to="15" data-count-prefix="+">+0</strong>
+                    <span>crecimiento del equipo</span>
+                  </div>
+                </div>
+
+                <div class="hero-actions">
+                  <button class="fullscreen-button" type="button" data-fullscreen-toggle>
+                    Pantalla completa
+                  </button>
+                </div>
+              </div>
+
+              <aside class="hero-panel" aria-label="Imagen principal de portada">
+                <img
+                  class="hero-panel__image"
+                  src="./imagenes/chica_tarjeta.png"
+                  alt="Cliente usando una tarjeta desde el movil"
+                />
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s03-resumen"
+          class="deck-slide overview-slide animate-section"
+          data-rail="growth"
+          data-slide-ref="S03"
+          data-slide-label="Resumen"
+        >
+          <div class="slide-frame">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Resumen ejecutivo</p>
+                <h2>La historia se entiende mejor cuando el ritmo se vuelve visible.</h2>
+              </div>
+              <p class="section-caption">Resultados despues de un a&ntilde;o y medio de trabajo</p>
+            </div>
+
+            <div class="metric-grid">
+              <article class="metric-card metric-card--currency fragment fade-up">
+                <p class="metric-label">Revenue</p>
+                <strong
+                  class="metric-value count-up"
+                  data-count-to="545000"
+                  data-count-format="locale-es"
+                  data-count-suffix=" €"
+                  >0</strong
+                >
+                <p class="metric-text">
+                  De los cuales 175k solo en el ultimo trimestre y con crecimiento exponencial.
+                </p>
+              </article>
+              <article class="metric-card fragment fade-up">
+                <p class="metric-label">Jefes de Proyecto</p>
+                <strong class="metric-value count-up" data-count-to="9">0</strong>
+                <p class="metric-text">
+                  El patrocinio deja de depender de un unico sponsor y se distribuye por areas.
+                </p>
+              </article>
+              <article class="metric-card fragment fade-up">
+                <p class="metric-label">Tamano del equipo</p>
+                <strong class="metric-value count-up" data-count-to="16">0</strong>
+                <p class="metric-text">
+                  Combinacion de delivery, arquitectura, analisis funcional y gobierno. Todo gestionado por squads.
+                </p>
+              </article>
+              <article class="metric-card fragment fade-up">
+                <p class="metric-label">Tecnologias en el cliente</p>
+                <strong class="metric-value count-up" data-count-to="3">0</strong>
+                <p class="metric-text">
+                  Estabilizado RPA, y consolidando Appian e IA, se iran alcanzando nuevas.
+                </p>
+              </article>
+            </div>
+
+            <div class="two-column-callout">
+              <div class="callout fragment fade-up">
+                <span class="callout-label">Lo que conviene demostrar</span>
+                <p>
+                  A diferencia de contratos y RFP concretas, aqui no hay fecha de inicio, ni
+                  fecha de fin, ni tarifas escasas comprometidas. La permanencia y la escalabilidad
+                  depende del contacto con cliente y la calidad de los resultados.
+                </p>
+              </div>
+              <div class="callout dark fragment fade-up">
+                <span class="callout-label">Lectura ejecutiva</span>
+                <p>
+                  Farmear ingreso, es casi tan importante (o mas) que las oportunidades comerciales
+                  singulares.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s04-evolucion"
+          class="deck-slide revenue-slide data-story-slide animate-section"
+          data-rail="growth"
+          data-slide-ref="S04"
+          data-slide-label="Revenue"
+        >
+          <div class="slide-frame">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Revenue</p>
+                <h2>Revenue ya no es promesa: Bankinter acelera mes a mes.</h2>
+              </div>
+              <p class="section-caption">
+                Solo Bankinter, de abr-25 a feb-26, y su posicion relativa dentro del FY25.
+              </p>
+            </div>
+
+            <div class="revenue-layout">
+              <article class="revenue-panel revenue-panel--chart" aria-label="Revenue mensual Bankinter">
+                <div class="revenue-panel__head">
+                  <div>
+                    <span class="revenue-panel__label">Bankinter - NR</span>
+                    <h3>Revenue mensual visible</h3>
+                  </div>
+                  <div class="revenue-stat-strip">
+                    <div class="revenue-stat">
+                      <span>Periodo visible</span>
+                      <strong
+                        class="count-up"
+                        data-count-to="311583"
+                        data-count-format="locale-es"
+                        data-count-suffix=" &euro;"
+                        >0</strong
+                      >
+                    </div>
+                    <div class="revenue-stat">
+                      <span>Pico mensual</span>
+                      <strong
+                        class="count-up"
+                        data-count-to="61890"
+                        data-count-format="locale-es"
+                        data-count-suffix=" &euro;"
+                        >0</strong
+                      >
+                    </div>
+                    <div class="revenue-stat">
+                      <span>Desde abr-25</span>
+                      <strong>&times;5,5</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="revenue-chart"
+                  aria-label="Revenue mensual de Bankinter de abril de 2025 a febrero de 2026"
+                >
+                  <div class="revenue-chart__bars">
+                    <div class="revenue-bar">
+                      <span class="revenue-bar__value">11.265</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.182; --bar-delay: 40ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Apr-25</span>
+                    </div>
+                    <div class="revenue-bar">
+                      <span class="revenue-bar__value">15.450</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.25; --bar-delay: 90ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">May-25</span>
+                    </div>
+                    <div class="revenue-bar">
+                      <span class="revenue-bar__value">15.067</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.244; --bar-delay: 140ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Jun-25</span>
+                    </div>
+                    <div class="revenue-bar">
+                      <span class="revenue-bar__value">18.880</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.305; --bar-delay: 190ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Jul-25</span>
+                    </div>
+                    <div class="revenue-bar">
+                      <span class="revenue-bar__value">10.498</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.17; --bar-delay: 240ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Aug-25</span>
+                    </div>
+                    <div class="revenue-bar">
+                      <span class="revenue-bar__value">16.297</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.263; --bar-delay: 290ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Sep-25</span>
+                    </div>
+                    <div class="revenue-bar revenue-bar--accent">
+                      <span class="revenue-bar__value">26.925</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.435; --bar-delay: 340ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Oct-25</span>
+                    </div>
+                    <div class="revenue-bar revenue-bar--accent">
+                      <span class="revenue-bar__value">35.796</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.578; --bar-delay: 390ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Nov-25</span>
+                    </div>
+                    <div class="revenue-bar revenue-bar--accent">
+                      <span class="revenue-bar__value">43.161</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.697; --bar-delay: 440ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Dec-25</span>
+                    </div>
+                    <div class="revenue-bar revenue-bar--accent">
+                      <span class="revenue-bar__value">56.354</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 0.911; --bar-delay: 490ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Jan-26</span>
+                    </div>
+                    <div class="revenue-bar revenue-bar--accent">
+                      <span class="revenue-bar__value">61.890</span>
+                      <div class="revenue-bar__track">
+                        <div class="revenue-bar__fill" style="--bar-scale: 1; --bar-delay: 540ms"></div>
+                      </div>
+                      <span class="revenue-bar__month">Feb-26</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="revenue-panel revenue-panel--clients" aria-label="Top Clientes Revenue FY25">
+                <div class="revenue-panel__head revenue-panel__head--stacked">
+                  <div>
+                    <span class="revenue-panel__label">Top Clientes Revenue</span>
+                    <h3>FY25</h3>
+                  </div>
+                  <p class="revenue-clients-note">
+                    Bankinter figura con 673.839 &euro; y 44,2 % de CM dentro del top visible.
+                  </p>
+                </div>
+
+                <table class="top-clients-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Cliente</th>
+                      <th scope="col">Net Revenue</th>
+                      <th scope="col">CM (%)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>TELEFONICA DE ESPA&Ntilde;A</td>
+                      <td>3.745.885 &euro;</td>
+                      <td class="cm cm--low">24,7 %</td>
+                    </tr>
+                    <tr>
+                      <td>JT International SA</td>
+                      <td>1.562.974 &euro;</td>
+                      <td class="cm cm--low">25,1 %</td>
+                    </tr>
+                    <tr>
+                      <td>ADIF (Administrador de Infraestructuras)</td>
+                      <td>882.945 &euro;</td>
+                      <td class="cm cm--low">28,3 %</td>
+                    </tr>
+                    <tr>
+                      <td>ENAIRE</td>
+                      <td>788.553 &euro;</td>
+                      <td class="cm cm--low">28,6 %</td>
+                    </tr>
+                    <tr>
+                      <td>REPSOL Utilities</td>
+                      <td>757.509 &euro;</td>
+                      <td class="cm cm--mid">39,8 %</td>
+                    </tr>
+                    <tr>
+                      <td>Madrid Digital Empleo</td>
+                      <td>709.345 &euro;</td>
+                      <td class="cm cm--low">28,9 %</td>
+                    </tr>
+                    <tr class="top-clients-table__row--highlight">
+                      <td>Bankinter</td>
+                      <td>673.839 &euro;</td>
+                      <td class="cm cm--good">44,2 %</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section
+          id="s05-organizacion"
+          class="deck-slide org-scope-slide data-story-slide animate-section"
+          data-auto-animate
+          data-rail="org"
+          data-slide-ref="S05"
+          data-slide-label="Organizacion"
+        >
+          <div class="slide-frame">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Organizacion BKT</p>
+                <h2 data-id="org-title">Sistemas y negocio ya tienen un mapa estable de responsables.</h2>
+              </div>
+              <p class="section-caption" data-id="org-caption">
+                Antonio Piqueras concentra el frente de sistemas. En paralelo, la capacidad ya
+                opera sobre areas finales y geografias clave del banco.
+              </p>
+            </div>
+
+            <div class="org-scope-layout">
+              <article class="org-panel" data-id="org-panel" aria-label="Organizacion de sistemas Bankinter">
+                <div class="org-panel__kicker">Organizacion BKT</div>
+
+                <div class="org-director">
+                  <span class="org-director__label">Sistemas</span>
+                  <div class="org-person org-person--director" data-id="org-director">
+                    <strong>Antonio Piqueras</strong>
+                    <span>Director de Transformacion de Procesos &amp; IA Generativa</span>
+                  </div>
+                </div>
+
+                <div class="org-stream-grid org-stream-grid--seed" data-id="org-stream-grid">
+                  <article class="org-stream org-stream--architecture" data-id="org-architecture">
+                    <span class="org-stream__label">Arquitectura</span>
+                    <strong>Santiago Villar</strong>
+                    <div class="org-stream__team org-stream__team--single">
+                      <span class="org-team-pill">Pablo J. Palacios</span>
+                    </div>
+                  </article>
+
+                  <article class="org-stream org-stream--build org-stage-hidden" data-id="org-build">
+                    <span class="org-stream__label">Nuevos desarrollos</span>
+                    <strong>Jorge Rey</strong>
+                    <div class="org-stream__team">
+                      <span class="org-team-pill">M. Sarang Lee</span>
+                      <span class="org-team-pill">Javier Guti&eacute;rrez</span>
+                      <span class="org-team-pill">Maria Nieto</span>
+                    </div>
+                  </article>
+
+                  <article class="org-stream org-stream--ia org-stage-hidden" data-id="org-ia">
+                    <span class="org-stream__label">IA</span>
+                    <strong>Antonio Caballero</strong>
+                    <div class="org-stream__team">
+                      <span class="org-team-pill">Daniel Guzm&aacute;n</span>
+                      <span class="org-team-pill">Javier Rodr&iacute;guez</span>
+                      <span class="org-team-pill">David Gil</span>
+                      <span class="org-team-pill">Alberto Azor&iacute;n</span>
+                      <span class="org-team-pill">Enrique Acedo</span>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+              <article class="scope-panel" data-id="scope-panel" aria-label="Alcance actual en areas y geografias">
+                <div class="scope-panel__head">
+                  <div>
+                    <span class="scope-panel__kicker">Alcance actual</span>
+                    <p class="scope-panel__copy">
+                      La capacidad ya toca areas finales de negocio y geografias donde el modelo
+                      empieza a ser recurrente.
+                    </p>
+                  </div>
+                  <div class="scope-panel__stats">
+                    <div class="scope-stat" data-id="scope-stat-areas">
+                      <strong>1</strong>
+                      <span>area</span>
+                    </div>
+                    <div class="scope-stat" data-id="scope-stat-geos">
+                      <strong>1</strong>
+                      <span>geografia</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="scope-orbit" data-id="scope-orbit">
+                  <span class="scope-orbit__label scope-orbit__label--outer">Areas</span>
+                  <span class="scope-orbit__label scope-orbit__label--inner">Geografias</span>
+
+                  <div class="scope-orbit__ring scope-orbit__ring--outer" aria-hidden="true"></div>
+                  <div class="scope-orbit__ring scope-orbit__ring--inner" aria-hidden="true"></div>
+
+                  <div class="scope-core" data-id="scope-core">
+                    <span>Automatizacion y desarrollo</span>
+                    <strong>RPA - Appian - IA</strong>
+                  </div>
+
+                  <div class="scope-node scope-node--area scope-node--operaciones" data-id="scope-operaciones">Operaciones</div>
+                  <div class="scope-node scope-node--area scope-node--mercados org-stage-hidden" data-id="scope-mercados">Mercados</div>
+                  <div class="scope-node scope-node--area scope-node--juridico org-stage-hidden" data-id="scope-juridico">Juridico</div>
+                  <div class="scope-node scope-node--area scope-node--financiero org-stage-hidden" data-id="scope-financiero">Financiero</div>
+                  <div class="scope-node scope-node--area scope-node--cobros org-stage-hidden" data-id="scope-cobros">Cobros y pagos</div>
+                  <div class="scope-node scope-node--area scope-node--riesgos org-stage-hidden" data-id="scope-riesgos">Riesgos</div>
+
+                  <div class="scope-node scope-node--geo scope-node--espana" data-id="scope-espana">Espa&ntilde;a</div>
+                  <div class="scope-node scope-node--geo scope-node--portugal org-stage-hidden" data-id="scope-portugal">Portugal</div>
+                  <div class="scope-node scope-node--geo scope-node--irlanda org-stage-hidden" data-id="scope-irlanda">Irlanda</div>
+                  <div class="scope-node scope-node--geo scope-node--bkcf org-stage-hidden" data-id="scope-bkcf">BKCF</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s06-q2"
+          class="deck-slide org-scope-slide data-story-slide animate-section"
+          data-auto-animate
+          data-rail="org"
+          data-slide-ref="S06"
+          data-slide-label="Organizacion"
+        >
+          <div class="slide-frame">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Organizacion BKT</p>
+                <h2 data-id="org-title">Sistemas y negocio ya tienen un mapa estable de responsables.</h2>
+              </div>
+              <p class="section-caption" data-id="org-caption">
+                Antonio Piqueras concentra el frente de sistemas. En paralelo, la capacidad ya
+                opera sobre areas finales y geografias clave del banco.
+              </p>
+            </div>
+
+            <div class="org-scope-layout">
+              <article class="org-panel" data-id="org-panel" aria-label="Organizacion de sistemas Bankinter">
+                <div class="org-panel__kicker">Organizacion BKT</div>
+
+                <div class="org-director">
+                  <span class="org-director__label">Sistemas</span>
+                  <div class="org-person org-person--director" data-id="org-director">
+                    <strong>Antonio Piqueras</strong>
+                    <span>Director de Transformacion de Procesos &amp; IA Generativa</span>
+                  </div>
+                </div>
+
+                <div class="org-stream-grid" data-id="org-stream-grid">
+                  <article class="org-stream org-stream--architecture" data-id="org-architecture">
+                    <span class="org-stream__label">Arquitectura</span>
+                    <strong>Santiago Villar</strong>
+                    <div class="org-stream__team org-stream__team--single">
+                      <span class="org-team-pill">Pablo J. Palacios</span>
+                    </div>
+                  </article>
+
+                  <article class="org-stream org-stream--build" data-id="org-build">
+                    <span class="org-stream__label">Nuevos desarrollos</span>
+                    <strong>Jorge Rey</strong>
+                    <div class="org-stream__team">
+                      <span class="org-team-pill">M. Sarang Lee</span>
+                      <span class="org-team-pill">Javier Guti&eacute;rrez</span>
+                      <span class="org-team-pill">Maria Nieto</span>
+                    </div>
+                  </article>
+
+                  <article class="org-stream org-stream--ia" data-id="org-ia">
+                    <span class="org-stream__label">IA</span>
+                    <strong>Antonio Caballero</strong>
+                    <div class="org-stream__team">
+                      <span class="org-team-pill">Daniel Guzm&aacute;n</span>
+                      <span class="org-team-pill">Javier Rodr&iacute;guez</span>
+                      <span class="org-team-pill">David Gil</span>
+                      <span class="org-team-pill">Alberto Azor&iacute;n</span>
+                      <span class="org-team-pill">Enrique Acedo</span>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+              <article class="scope-panel" data-id="scope-panel" aria-label="Alcance actual en areas y geografias">
+                <div class="scope-panel__head">
+                  <div>
+                    <span class="scope-panel__kicker">Alcance actual</span>
+                    <p class="scope-panel__copy">
+                      La capacidad ya toca areas finales de negocio y geografias donde el modelo
+                      empieza a ser recurrente.
+                    </p>
+                  </div>
+                  <div class="scope-panel__stats">
+                    <div class="scope-stat" data-id="scope-stat-areas">
+                      <strong>6</strong>
+                      <span>areas</span>
+                    </div>
+                    <div class="scope-stat" data-id="scope-stat-geos">
+                      <strong>4</strong>
+                      <span>geografias</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="scope-orbit" data-id="scope-orbit">
+                  <span class="scope-orbit__label scope-orbit__label--outer">Areas</span>
+                  <span class="scope-orbit__label scope-orbit__label--inner">Geografias</span>
+
+                  <div class="scope-orbit__ring scope-orbit__ring--outer" aria-hidden="true"></div>
+                  <div class="scope-orbit__ring scope-orbit__ring--inner" aria-hidden="true"></div>
+
+                  <div class="scope-core" data-id="scope-core">
+                    <span>Automatizacion y desarrollo</span>
+                    <strong>RPA - Appian - IA</strong>
+                  </div>
+
+                  <div class="scope-node scope-node--area scope-node--operaciones" data-id="scope-operaciones">Operaciones</div>
+                  <div class="scope-node scope-node--area scope-node--mercados" data-id="scope-mercados">Mercados</div>
+                  <div class="scope-node scope-node--area scope-node--juridico" data-id="scope-juridico">Juridico</div>
+                  <div class="scope-node scope-node--area scope-node--financiero" data-id="scope-financiero">Financiero</div>
+                  <div class="scope-node scope-node--area scope-node--cobros" data-id="scope-cobros">Cobros y pagos</div>
+                  <div class="scope-node scope-node--area scope-node--riesgos" data-id="scope-riesgos">Riesgos</div>
+
+                  <div class="scope-node scope-node--geo scope-node--espana" data-id="scope-espana">Espa&ntilde;a</div>
+                  <div class="scope-node scope-node--geo scope-node--portugal" data-id="scope-portugal">Portugal</div>
+                  <div class="scope-node scope-node--geo scope-node--irlanda" data-id="scope-irlanda">Irlanda</div>
+                  <div class="scope-node scope-node--geo scope-node--bkcf" data-id="scope-bkcf">BKCF</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s07-q3"
+          class="deck-slide quarter-slide animate-section"
+          data-auto-animate
+          data-rail="q3"
+          data-slide-ref="S07"
+          data-slide-label="Q3"
+        >
+          <div class="slide-frame">
+            <div class="quarter-shell">
+              <div class="quarter-head">
+                <div>
+                  <p class="eyebrow">Tramo 3</p>
+                  <h2 data-id="quarter-title">Q3 · Expandir el patrocinio</h2>
+                </div>
+                <div class="quarter-kpis">
+                  <div class="quarter-kpi" data-id="quarter-kpi-1">
+                    <span>Procesos acumulados</span>
+                    <strong>24</strong>
+                  </div>
+                  <div class="quarter-kpi" data-id="quarter-kpi-2">
+                    <span>Directores activos</span>
+                    <strong>7</strong>
+                  </div>
+                  <div class="quarter-kpi" data-id="quarter-kpi-3">
+                    <span>Equipo</span>
+                    <strong>13</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quarter-body">
+                <div class="quarter-narrative">
+                  <p class="quote-card">
+                    “La velocidad hace visible el valor. Y cuando el valor se ve, la demanda
+                    se multiplica.”
+                  </p>
+                  <div class="focus-card">
+                    <span class="focus-card__label">Mensaje que deja</span>
+                    <p>
+                      Aqui el relato deja de ser tecnico y se vuelve institucional: mas
+                      directores, mas casos y una plataforma que empieza a circular por el banco.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="month-grid">
+                  <article class="month-card fragment fade-up">
+                    <span class="month-chip">Julio</span>
+                    <strong>Escala visible</strong>
+                    <p>18 procesos acumulados y entrada de Atencion al Cliente.</p>
+                  </article>
+                  <article class="month-card fragment fade-up">
+                    <span class="month-chip">Agosto</span>
+                    <strong>Continuidad</strong>
+                    <p>Se mantiene la cadencia incluso en verano gracias al modelo de factory.</p>
+                  </article>
+                  <article class="month-card fragment fade-up">
+                    <span class="month-chip">Septiembre</span>
+                    <strong>Nueva legitimidad</strong>
+                    <p>24 procesos, 7 directores y backlog compartido con mayor ambicion.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s08-q4"
+          class="deck-slide quarter-slide dark-quarter animate-section"
+          data-auto-animate
+          data-rail="q4"
+          data-slide-ref="S08"
+          data-slide-label="Q4"
+        >
+          <div class="slide-frame">
+            <div class="quarter-shell">
+              <div class="quarter-head">
+                <div>
+                  <p class="eyebrow">Tramo 4</p>
+                  <h2 data-id="quarter-title">Q4 · Consolidar la fabrica</h2>
+                </div>
+                <div class="quarter-kpis">
+                  <div class="quarter-kpi" data-id="quarter-kpi-1">
+                    <span>Procesos acumulados</span>
+                    <strong>32</strong>
+                  </div>
+                  <div class="quarter-kpi" data-id="quarter-kpi-2">
+                    <span>Directores activos</span>
+                    <strong>8</strong>
+                  </div>
+                  <div class="quarter-kpi" data-id="quarter-kpi-3">
+                    <span>Equipo</span>
+                    <strong>16</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quarter-body">
+                <div class="quarter-narrative">
+                  <p class="quote-card">
+                    “A cierre de ano ya no estamos defendiendo el modelo. Estamos gestionando
+                    su siguiente nivel de escala.”
+                  </p>
+                  <div class="focus-card">
+                    <span class="focus-card__label">Mensaje que deja</span>
+                    <p>
+                      El cierre debe sentirse maduro: mas gobierno, mas reutilizacion y una
+                      sensacion clara de capacidad instalada, no de esfuerzo puntual.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="month-grid">
+                  <article class="month-card fragment fade-up">
+                    <span class="month-chip">Octubre</span>
+                    <strong>Governance reforzado</strong>
+                    <p>Se incorporan Cumplimiento y un backlog con priorizacion conjunta.</p>
+                  </article>
+                  <article class="month-card fragment fade-up">
+                    <span class="month-chip">Noviembre</span>
+                    <strong>Capacidad reconocible</strong>
+                    <p>30 procesos acumulados y operating model mas robusto.</p>
+                  </article>
+                  <article class="month-card fragment fade-up">
+                    <span class="month-chip">Diciembre</span>
+                    <strong>Cierre con narrativa</strong>
+                    <p>32 procesos, 16 personas y un roadmap que ya apunta al siguiente ano.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s09-stakeholders"
+          class="deck-slide stakeholders-slide data-story-slide animate-section"
+          data-rail="outcomes"
+          data-slide-ref="S09"
+          data-slide-label="Stakeholders"
+        >
+          <div class="slide-frame">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Expansion del patrocinio</p>
+                <h2>Los stakeholders dejan de ser una lista y pasan a ser una red.</h2>
+              </div>
+              <p class="section-caption">
+                Buena slide para mostrar que el valor ya no depende de un solo sponsor.
+              </p>
+            </div>
+
+            <div class="stakeholder-layout">
+              <div class="network-card">
+                <div class="network-core">Appian Factory</div>
+                <div class="network-pill fragment fade-up">Operaciones</div>
+                <div class="network-pill fragment fade-up">Riesgos</div>
+                <div class="network-pill fragment fade-up">Banca Digital</div>
+                <div class="network-pill fragment fade-up">Canales</div>
+                <div class="network-pill fragment fade-up">Atencion Cliente</div>
+                <div class="network-pill fragment fade-up">Cumplimiento</div>
+                <div class="network-pill fragment fade-up">Calidad</div>
+                <div class="network-pill fragment fade-up">Transformacion</div>
+              </div>
+
+              <div class="insight-stack">
+                <div class="insight-card fragment fade-left">
+                  <span class="insight-card__label">Senal de madurez</span>
+                  <p>
+                    La mejor prueba de exito no es el numero bruto de entregas, sino la variedad
+                    de areas que empiezan a pedir el mismo modelo.
+                  </p>
+                </div>
+                <div class="insight-card fragment fade-left">
+                  <span class="insight-card__label">Como contarlo</span>
+                  <p>
+                    “En enero teniamos un sponsor. En diciembre teniamos una red de directores
+                    que ya usaban Appian como palanca de simplificacion.”
+                  </p>
+                </div>
+                <div class="insight-stat fragment fade-left">
+                  <strong class="count-up" data-count-to="8">0</strong>
+                  <span>direcciones implicadas al cierre</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s10-equipo"
+          class="deck-slide team-slide data-story-slide animate-section"
+          data-rail="outcomes"
+          data-slide-ref="S10"
+          data-slide-label="Equipo"
+        >
+          <div class="slide-frame">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Equipo y operating model</p>
+                <h2>Escalar entregas tambien es escalar el sistema que las hace repetibles.</h2>
+              </div>
+              <p class="section-caption">
+                Slide util para conectar crecimiento del equipo con mejora de la capacidad.
+              </p>
+            </div>
+
+            <div class="team-layout">
+              <div class="bars-card">
+                <div class="bars-header">
+                  <span>Evolucion del equipo</span>
+                  <strong>7 → 16 personas</strong>
+                </div>
+                <div class="bar-chart">
+                  <div class="bar-column">
+                    <div class="bar" style="--bar-scale: 0.44"></div>
+                    <span>ENE</span>
+                    <strong>7</strong>
+                  </div>
+                  <div class="bar-column">
+                    <div class="bar" style="--bar-scale: 0.5"></div>
+                    <span>MAR</span>
+                    <strong>8</strong>
+                  </div>
+                  <div class="bar-column">
+                    <div class="bar" style="--bar-scale: 0.56"></div>
+                    <span>MAY</span>
+                    <strong>9</strong>
+                  </div>
+                  <div class="bar-column">
+                    <div class="bar" style="--bar-scale: 0.69"></div>
+                    <span>JUL</span>
+                    <strong>11</strong>
+                  </div>
+                  <div class="bar-column">
+                    <div class="bar" style="--bar-scale: 0.81"></div>
+                    <span>SEP</span>
+                    <strong>13</strong>
+                  </div>
+                  <div class="bar-column">
+                    <div class="bar" style="--bar-scale: 1"></div>
+                    <span>DIC</span>
+                    <strong>16</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="operating-model">
+                <article class="operating-card fragment fade-up">
+                  <span class="operating-card__label">Discovery</span>
+                  <p>Priorizacion y framing mas rapidos, con menos ida y vuelta entre areas.</p>
+                </article>
+                <article class="operating-card fragment fade-up">
+                  <span class="operating-card__label">Delivery</span>
+                  <p>Plantillas, componentes y cadencia de releases para sostener velocidad.</p>
+                </article>
+                <article class="operating-card fragment fade-up">
+                  <span class="operating-card__label">Governance</span>
+                  <p>Visibilidad ejecutiva, cartera priorizada y ownership mas claro.</p>
+                </article>
+                <article class="operating-card fragment fade-up">
+                  <span class="operating-card__label">Adopcion</span>
+                  <p>El valor se hace visible en distintas direcciones, no solo en tecnologia.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s11-cierre"
+          class="deck-slide close-slide animate-section"
+          data-rail="close"
+          data-slide-ref="S11"
+          data-slide-label="Cierre"
+        >
+          <div class="slide-frame">
+            <div class="ambient ambient--orange ambient--dense" aria-hidden="true"></div>
+            <div class="ambient ambient--blue ambient--dense" aria-hidden="true"></div>
+            <div class="close-layout">
+              <div>
+                <p class="eyebrow">Cierre</p>
+                <h2>Del primer piloto a una capacidad transversal.</h2>
+                <p class="lead">
+                  Si esta direccion te encaja, la siguiente iteracion deberia sustituir
+                  placeholders por datos reales, logos oficiales y un guion mas afinado para
+                  comite o direccion.
+                </p>
+              </div>
+
+              <div class="next-step-grid">
+                <div class="next-step-card fragment fade-up">
+                  <span>1</span>
+                  <p>Reemplazar metricas ficticias por hitos y cifras reales.</p>
+                </div>
+                <div class="next-step-card fragment fade-up">
+                  <span>2</span>
+                  <p>Elegir si cerramos la identidad en claro o introducimos tramos oscuros.</p>
+                </div>
+                <div class="next-step-card fragment fade-up">
+                  <span>3</span>
+                  <p>Refinar el relato para que cada slide tenga una unica idea ejecutiva.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="s12-equipo-completo"
+          class="deck-slide roster-slide data-story-slide animate-section"
+          data-rail="appendix"
+          data-slide-ref="S12"
+          data-slide-label="Equipo completo"
+        >
+          <div class="slide-frame">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Capacidad instalada</p>
+                <h2>
+                  El equipo Bankinter ya se percibe como una capacidad completa, no como
+                  una suma de perfiles.
+                </h2>
+              </div>
+              <p class="section-caption">
+                Slide exploratoria para visualizar todo el equipo que sostiene el
+                delivery en Bankinter.
+              </p>
+            </div>
+
+            <div
+              id="team-roster-root"
+              class="team-roster-root"
+              aria-label="Mapa del equipo completo en Bankinter"
+            ></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+    <script
+      crossorigin
+      src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
+
