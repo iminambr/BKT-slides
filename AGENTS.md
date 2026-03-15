@@ -6,8 +6,15 @@
 - Audiencia prevista: equipo mixto negocio + delivery + direccion. El tono debe ser ejecutivo, sobrio y con sensacion de progreso.
 
 ## Estado actual
-- Repositorio creado desde cero en esta sesion.
-- No hay `git` inicializado en el directorio.
+- Repositorio local ya inicializado y vinculado a GitHub.
+- Remoto principal: `https://github.com/iminambr/BKT-slides.git`.
+- Sitio publicado actual: `https://iminambr.github.io/BKT-slides/`.
+- Rama remota estable publicada: `main`.
+- Rama de trabajo para iteraciones nuevas: `work/iteraciones-pendientes`.
+- Flujo recomendado desde ahora:
+  - hacer cambios nuevos sobre `work/iteraciones-pendientes`,
+  - validar localmente y, si aplica, tambien en GitHub Pages,
+  - fusionar despues a `main` solo cuando el usuario lo pida.
 - La primera version usa HTML/CSS/JS estatico y carga `reveal.js 5.2.1` desde CDN.
 - Entorno macOS validado el `2026-03-14`:
   - `python3` esta disponible en `/usr/bin/python3`.
@@ -26,6 +33,10 @@
 - El proyecto ya dispone de identificadores visibles por slide (`S01`, `S02`, etc.) y de un fichero `GUION_PRESENTACION.md` para iterar narrativa y datos.
 - `GUION_PRESENTACION.md` ya no debe usarse para contexto general: su funcion es ser el configurador exacto slide a slide, por componentes y texto visible.
 - El proyecto dispone de una carpeta `imagenes/` para referencias visuales externas que luego se citan desde el guion.
+- En local siguen existiendo carpetas auxiliares no pensadas para publicacion automatica:
+  - `.codex-artifacts/`: capturas y validaciones de agentes,
+  - `info/`: materiales de apoyo del usuario.
+  Estas rutas no deben mezclarse por defecto con cambios de la web salvo peticion explicita.
 
 ## Decisiones de diseno tomadas
 - Direccion visual inicial: fondo claro tipo marfil/calido, no negro.
@@ -83,6 +94,9 @@
   - si `python` sigue apuntando al alias de Store, usar `C:\Users\iminambr\AppData\Local\Programs\Python\Python312\python.exe -m http.server 8000`
   - abrir `http://127.0.0.1:8000`
 - No requiere build.
+- Para validar una slide concreta de Reveal, abrir siempre la ruta con hash, por ejemplo:
+  - `http://127.0.0.1:8000/index.html#/s02-timeline-2024q4`
+  - si no se usa hash, algunas comprobaciones automaticas pueden leer la slide como no activa.
 
 ## Comprobacion visual
 - macOS y Windows pueden validar el deck con navegador real en modo headless.
@@ -116,6 +130,18 @@
 - `node` ya esta disponible al menos en el Windows validado; aun asi, mantener el proyecto sin build mientras siga siendo suficiente.
 - Si mas adelante se decide migrar a framework, la opcion natural sigue siendo `Vite` + dependencias locales.
 - Si el usuario pide una variante oscura, hacerla como branch visual del CSS, no como reescritura total.
+- Al trabajar con varios agentes, asumir que el contexto operativo importante debe quedar reflejado aqui y no solo en el chat.
+- Al alternar entre Windows y macOS:
+  - evitar pasos que dependan de un path local unico,
+  - preferir comandos equivalentes y simples,
+  - recordar que en Windows el navegador estable para Playwright es el Chrome/Edge del sistema y en macOS puede usarse el Chromium cacheado ya validado.
+- Al alternar entre ramas o publicar:
+  - usar `work/iteraciones-pendientes` para cambios nuevos,
+  - no empujar a `main` salvo instruccion explicita del usuario,
+  - revisar antes de publicar que el diff real de la web se limite a archivos del sitio (`index.html`, `styles.css`, `app.js`, `assets/`, etc.) y no incluya artefactos auxiliares.
+- Sobre animaciones y transiciones:
+  - no desactivar globalmente las animaciones del deck salvo peticion explicita del usuario,
+  - si una transicion entre slides molesta, ajustar primero el mecanismo concreto (`reveal`, `auto-animate`, `fragments` o CSS de esa slide) sin romper las animaciones internas del timeline, barras o cards.
 - Si se trabaja alternando Mac y Windows, priorizar instrucciones operativas que no dependan de:
   - rutas absolutas salvo cuando sean necesarias en Windows,
   - navegadores descargados por `playwright`, salvo el `Chromium` ya validado en este Mac mientras siga presente en cache,
