@@ -1,0 +1,18 @@
+INSTRUCCIONES DE EJECUCION
+
+1. Abrir una terminal.
+
+2. Ir a la carpeta del proyecto:
+cd "/Users/iminambr/Library/CloudStorage/OneDrive-NTTDATAEMEAL/98. Código/Presentación Bankinter Retiro"
+
+3. Levantar un servidor local:
+python3 -m http.server 8000
+
+4. Abrir esta URL en el navegador:
+http://127.0.0.1:8000
+
+5. Para parar el servidor, volver a la terminal y pulsar:
+Ctrl+C
+
+NOTA
+- Tambien se puede intentar abrir directamente el fichero index.html, pero es mejor usar el servidor local.
