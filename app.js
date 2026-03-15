@@ -158,7 +158,7 @@ const TIMELINE_DATA = [
     label: "2025 Q4",
     summary: "Proveedor Appian Reconocido",
     caption:
-      "El cierre refleja una capacidad instalada y un backlog compartido entre areas. Apostamos por ampliar en prevision de nuevo negocio",
+      "El cierre refleja una capacidad instalada y un backlog compartido entre areas. Apostamos por ampliar en prevision de nuevo negocio.",
     requesters: [
       {
         domain: "Arquitectura",

@@ -102,7 +102,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 ### Estado 1 · 2024 Q4
 - Quarter activo exacto: `2024 Q4`
 - Resumen del eje exacto: `Solicitud del primer proceso`
-- Mensaje contextual exacto: `Primera solicitud de orden de magnitud para un proceso del área de riesgos financieros. Hasta el momento inversión en evolutivos.`
+- Mensaje contextual exacto: `Primera solicitud de orden de magnitud para un proceso del área de riesgos financieros.`
 - Area solicitante exacta:
   - `Arquitectura`
     - `Santi Villar`
@@ -163,7 +163,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Area solicitante exacta:
   - `Arquitectura`
     - `Santi Villar`
-     - `Pablo Palacios`
+      - `Pablo Palacios`
   - `Nuevos Desarrollos`
     - `Jorge Rey`
       - `Maria Sarang Lee`
@@ -182,11 +182,11 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 ### Estado 5 · 2025 Q4
 - Quarter activo exacto: `2025 Q4`
 - Resumen del eje exacto: `Proveedor Appian Reconocido`
-- Mensaje contextual exacto: `El cierre refleja una capacidad instalada y un backlog compartido entre areas. Apostamos por ampliar en previsión de nuevo negocio`
+- Mensaje contextual exacto: `El cierre refleja una capacidad instalada y un backlog compartido entre areas. Apostamos por ampliar en previsión de nuevo negocio.`
 - Area solicitante exacta:
   - `Arquitectura`
     - `Santi Villar`
-     - `Pablo Palacios`
+      - `Pablo Palacios`
   - `Nuevos Desarrollos`
     - `Jorge Rey`
       - `Maria Sarang Lee`
@@ -209,7 +209,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Area solicitante exacta:
   - `Arquitectura`
     - `Santi Villar`
-     - `Pablo Palacios`
+      - `Pablo Palacios`
   - `Nuevos Desarrollos`
     - `Jorge Rey`
       - `Maria Sarang Lee`
@@ -228,14 +228,14 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
   - `Revenue 153.000 EUR`
 - Procesos exactos: `Requerimientos Judiciales`, `Seguros Vida Ahorro`, `Luxemburgo`, `Leasing alta disposiciones`, `Cuentas tesoreras`, `Recibos y domiciliaciones`, `Emisión de cheques`, `Bastanteos`, `Mantenimiento Datos Cliente`, `Gestión de embargos`, `Cuentas Especiales Promotor`, `Disputas`, `Pagos y conciliaciones`. `Creatividades`
 
-### Estado 6 · 2026 Q2
+### Estado 7 · 2026 Q2
 - Quarter activo exacto: `2026 Q2`
 - Resumen del eje exacto: `En camino a proveedor principal`
 - Mensaje contextual exacto: `Ampliamos la participación en procesos con IA, y nos consolidamos como proveedor principal`
 - Area solicitante exacta:
   - `Arquitectura`
     - `Santi Villar`
-     - `Pablo Palacios`
+      - `Pablo Palacios`
   - `Nuevos Desarrollos`
     - `Jorge Rey`
       - `Maria Sarang Lee`
@@ -339,25 +339,24 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 #### C02 · Titular principal
 - Tipo: titular principal
 - Posicion: parte superior izquierda
-- Texto exacto: `Revenue ya no es promesa: Bankinter acelera mes a mes.`
+- Texto exacto: `Bankinter acelera mes a mes.`
 
 #### C03 · Caption superior
 - Tipo: caption
 - Posicion: parte superior derecha
-- Texto exacto: `Solo Bankinter, de abr-25 a feb-26, y su posicion relativa dentro del FY25.`
+- Texto exacto: `5 meses superando el record de forma consecutiva`
 
 #### C04 · Panel izquierdo
 - Tipo: tarjeta principal
 - Posicion: mitad izquierda
 - Label exacta: `Bankinter - NR`
-- Titulo exacto: `Revenue mensual visible`
+- Titulo exacto: `Revenue mensual`
 
 #### C05 · KPIs dentro del panel izquierdo
 - Tipo: tira de metricas
 - Posicion: cabecera del panel izquierdo
-- Metric 1: `Periodo visible` -> `311.583 €`
-- Metric 2: `Pico mensual` -> `61.890 €`
-- Metric 3: `Desde abr-25` -> `×5,5`
+- Metric 1: `Pico mensual` -> `61.890 €`
+- Metric 2: `Desde abr-25` -> `×5,5`
 
 #### C06 · Grafico de barras mensual
 - Tipo: grafico de barras verticales
@@ -381,7 +380,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Posicion: mitad derecha
 - Label exacta: `Top Clientes Revenue`
 - Titulo exacto: `FY25`
-- Texto de apoyo exacto: `Bankinter figura con 673.839 € y 44,2 % de CM dentro del top visible.`
+- Texto de apoyo exacto: `Séptima cuenta en volumen de Enterprise Optimization.`
 
 #### C08 · Tabla Top Clientes Revenue
 - Tipo: tabla
@@ -412,12 +411,12 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 #### C02 · Titular principal
 - Tipo: titular principal
 - Posicion: parte superior izquierda
-- Texto exacto: `Sistemas y negocio ya tienen un mapa estable de responsables.`
+- Texto exacto: `Inicios de RPA`
 
 #### C03 · Caption
 - Tipo: texto de apoyo
 - Posicion: parte superior derecha
-- Texto exacto: `Antonio Piqueras concentra el frente de sistemas. En paralelo, la capacidad ya opera sobre areas finales y geografias clave del banco.`
+- Texto exacto: `RPA y automatización concentrada en arquitectura, para usuario final de Operaciones`
 
 #### C04 · Panel izquierdo
 - Tipo: panel de organizacion
@@ -446,7 +445,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Tipo: panel de alcance
 - Posicion: mitad derecha
 - Label exacta: `Alcance actual`
-- Texto exacto: `La capacidad ya toca areas finales de negocio y geografias donde el modelo empieza a ser recurrente.`
+- Texto exacto: `Siempre ha habido un trabajo donde no solo nos relacionamos con sistemas, sino muy de cerca con negocio.`
 
 #### C08 · Stats de alcance inicial
 - Tipo: mini KPI
@@ -487,12 +486,12 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 #### C02 · Titular principal
 - Tipo: titular principal
 - Posicion: parte superior izquierda
-- Texto exacto: `Sistemas y negocio ya tienen un mapa estable de responsables.`
+- Texto exacto: `Actual: Llegada a todas las áreas de transformación digital`
 
 #### C03 · Caption
 - Tipo: texto de apoyo
 - Posicion: parte superior derecha
-- Texto exacto: `Antonio Piqueras concentra el frente de sistemas. En paralelo, la capacidad ya opera sobre areas finales y geografias clave del banco.`
+- Texto exacto: `Diversificada la llegada de peticiones y nuevos procesos / desarrollos a muchos mas puntos origen, y con llegada a nuevas áreas de negocio.`
 
 #### C04 · Panel izquierdo
 - Tipo: panel de organizacion
@@ -536,7 +535,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Tipo: panel de alcance
 - Posicion: mitad derecha
 - Label exacta: `Alcance actual`
-- Texto exacto: `La capacidad ya toca areas finales de negocio y geografias donde el modelo empieza a ser recurrente.`
+- Texto exacto: `Siempre ha habido un trabajo donde no solo nos relacionamos con sistemas, sino muy de cerca con negocio.`
 
 #### C09 · Stats de alcance completo
 - Tipo: mini KPI
@@ -571,7 +570,65 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
   - `Irlanda`
   - `BKCF`
 
-## S07 · Q3
+## S07 · Equipo completo
+
+### Referencias visuales
+- Archivo en `imagenes/`:
+- Uso previsto: reinterpretar la referencia de organigrama aportada en chat como una slide clara, integrada con el deck y renderizada con componentes React.
+
+### Componentes
+
+#### C01 · Eyebrow
+- Tipo: eyebrow
+- Posicion: parte superior izquierda
+- Texto exacto: `Capacidad instalada`
+
+#### C02 · Titular principal
+- Tipo: titular principal
+- Posicion: parte superior izquierda
+- Texto exacto: `El equipo Bankinter ya se percibe como una capacidad completa, no como una suma de perfiles.`
+
+#### C03 · Caption superior
+- Tipo: caption
+- Posicion: parte superior derecha
+- Texto exacto: `Slide exploratoria para visualizar todo el equipo que sostiene el delivery en Bankinter.`
+
+#### C04 · Banda Cross
+- Tipo: banda con tarjetas de personas
+- Posicion: franja superior del organigrama
+- Label exacta: `Cross`
+- Nombres exactos: `Arturo Cercadillo`, `Stefania Talpa`, `Sofia Pons`
+
+#### C05 · Panel IA
+- Tipo: panel lateral
+- Posicion: columna izquierda del organigrama
+- Label exacta: `IA`
+- Nombres exactos: `Ramon Rodriguez`, `Aina Caselles`
+
+#### C06 · Panel Appian leads
+- Tipo: fila superior de liderazgo Appian
+- Posicion: panel principal derecho
+- Label exacta: `Appian`
+- Nombres exactos: `Jose Luis Boix`, `Carlos Dominguez`, `Gema Lopez`
+
+#### C07 · Panel Appian delivery
+- Tipo: grid de delivery
+- Posicion: panel principal derecho, dos filas centrales
+- Nombres exactos: `Ruben Blanca`, `V. Javier Diaz`, `Cesar Pinto`, `Pablo Altes`, `Tania Robledo`, `Angelica Quaranta`
+
+#### C08 · Nodo hibrido
+- Tipo: tarjeta mixta
+- Posicion: panel principal derecho, franja inferior
+- Nombre exacto: `Mercedes Suarez`
+
+#### C09 · Base de arquitectura
+- Tipo: banda inferior
+- Posicion: base del organigrama
+- Label exacta: `ARQ`
+- Nombre exacto: `Tomas Redondo`
+- Texto exacto: `Base de arquitectura e integracion que sostiene el delivery y la escalabilidad del modelo.`
+
+## S08 · Q3
 
 ### Referencias visuales
 - Archivo en `imagenes/`:
@@ -639,7 +696,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Titular exacto: `Nueva legitimidad`
 - Texto exacto: `24 procesos, 7 directores y backlog compartido con mayor ambicion.`
 
-## S08 · Q4
+## S09 · Q4
 
 ### Referencias visuales
 - Archivo en `imagenes/`:
@@ -707,7 +764,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Titular exacto: `Cierre con narrativa`
 - Texto exacto: `32 procesos, 16 personas y un roadmap que ya apunta al siguiente ano.`
 
-## S09 · Stakeholders
+## S10 · Stakeholders
 
 ### Referencias visuales
 - Archivo en `imagenes/`:
@@ -758,7 +815,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Valor exacto: `8`
 - Texto exacto: `direcciones implicadas al cierre`
 
-## S10 · Equipo
+## S11 · Equipo
 
 ### Referencias visuales
 - Archivo en `imagenes/`:
@@ -816,101 +873,4 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Label exacta: `Adopcion`
 - Texto exacto: `El valor se hace visible en distintas direcciones, no solo en tecnologia.`
 
-## S11 · Cierre
-
-### Referencias visuales
-- Archivo en `imagenes/`:
-- Uso previsto:
-
-### Componentes
-
-#### C01 · Eyebrow
-- Tipo: eyebrow
-- Posicion: parte superior izquierda
-- Texto exacto: `Cierre`
-
-#### C02 · Titular principal
-- Tipo: titular principal
-- Posicion: izquierda
-- Texto exacto: `Del primer piloto a una capacidad transversal.`
-
-#### C03 · Bajada principal
-- Tipo: bajada
-- Posicion: izquierda
-- Texto exacto: `Si esta direccion te encaja, la siguiente iteracion deberia sustituir placeholders por datos reales, logos oficiales y un guion mas afinado para comite o direccion.`
-
-#### C04 · Tarjeta siguiente paso 1
-- Tipo: tarjeta
-- Posicion: derecha
-- Numero exacto: `1`
-- Texto exacto: `Reemplazar metricas ficticias por hitos y cifras reales.`
-
-#### C05 · Tarjeta siguiente paso 2
-- Tipo: tarjeta
-- Posicion: derecha
-- Numero exacto: `2`
-- Texto exacto: `Elegir si cerramos la identidad en claro o introducimos tramos oscuros.`
-
-#### C06 · Tarjeta siguiente paso 3
-- Tipo: tarjeta
-- Posicion: derecha
-- Numero exacto: `3`
-- Texto exacto: `Refinar el relato para que cada slide tenga una unica idea ejecutiva.`
-
-## S12 · Equipo completo
-
-### Referencias visuales
-- Archivo en `imagenes/`:
-- Uso previsto: reinterpretar la referencia de organigrama aportada en chat como una slide clara, integrada con el deck y renderizada con componentes React.
-
-### Componentes
-
-#### C01 · Eyebrow
-- Tipo: eyebrow
-- Posicion: parte superior izquierda
-- Texto exacto: `Capacidad instalada`
-
-#### C02 · Titular principal
-- Tipo: titular principal
-- Posicion: parte superior izquierda
-- Texto exacto: `El equipo Bankinter ya se percibe como una capacidad completa, no como una suma de perfiles.`
-
-#### C03 · Caption superior
-- Tipo: caption
-- Posicion: parte superior derecha
-- Texto exacto: `Slide exploratoria para visualizar todo el equipo que sostiene el delivery en Bankinter.`
-
-#### C04 · Banda Cross
-- Tipo: banda con tarjetas de personas
-- Posicion: franja superior del organigrama
-- Label exacta: `Cross`
-- Nombres exactos: `Arturo Cercadillo`, `Stefania Talpa`, `Sofia Pons`
-
-#### C05 · Panel IA
-- Tipo: panel lateral
-- Posicion: columna izquierda del organigrama
-- Label exacta: `IA`
-- Nombres exactos: `Ramon Rodriguez`, `Aina Caselles`
-
-#### C06 · Panel Appian leads
-- Tipo: fila superior de liderazgo Appian
-- Posicion: panel principal derecho
-- Label exacta: `Appian`
-- Nombres exactos: `Jose Luis Boix`, `Carlos Dominguez`, `Gema Lopez`
-
-#### C07 · Panel Appian delivery
-- Tipo: grid de delivery
-- Posicion: panel principal derecho, dos filas centrales
-- Nombres exactos: `Ruben Blanca`, `V. Javier Diaz`, `Cesar Pinto`, `Pablo Altes`, `Tania Robledo`, `Angelica Quaranta`
-
-#### C08 · Nodo hibrido
-- Tipo: tarjeta mixta
-- Posicion: panel principal derecho, franja inferior
-- Nombre exacto: `Mercedes Suarez`
-
-#### C09 · Base de arquitectura
-- Tipo: banda inferior
-- Posicion: base del organigrama
-- Label exacta: `ARQ`
-- Nombre exacto: `Tomas Redondo`
-- Texto exacto: `Base de arquitectura e integracion que sostiene el delivery y la escalabilidad del modelo.`
+## S12 · Cierre
