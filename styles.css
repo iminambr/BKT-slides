@@ -1395,17 +1395,16 @@ body.is-fullscreen .reveal .slides section.revenue-slide {
   }
 
   .scope-core {
-    width: min(46%, 228px);
-    padding: 13px 14px;
-    border-radius: 22px;
+    width: clamp(132px, 34%, 156px);
+    padding: 14px;
   }
 
-  .scope-core span {
-    font-size: 14px;
+  .scope-core__logo {
+    width: min(74%, 94px);
   }
 
-  .scope-core strong {
-    font-size: 23px;
+  .scope-core__name {
+    font-size: 10px;
   }
 
   .scope-node {
@@ -1680,7 +1679,12 @@ body.is-fullscreen .reveal .slides section.org-scope-slide {
 }
 
 .org-stream-grid--seed::after {
-  left: 16.666%;
+  display: none;
+}
+
+.org-stream-grid--seed .org-stream--architecture::before {
+  top: -34px;
+  height: 34px;
 }
 
 .org-stream {
@@ -1751,6 +1755,29 @@ body.is-fullscreen .reveal .slides section.org-scope-slide {
   pointer-events: none;
 }
 
+.org-reveal-in {
+  opacity: 0;
+  transform: translateY(10px) scale(0.985);
+  will-change: opacity, transform;
+}
+
+.deck-slide.present.is-visible .org-reveal-in {
+  animation: orgRevealIn 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--org-reveal-delay, 0ms);
+}
+
+@keyframes orgRevealIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .scope-panel__head {
   display: flex;
   justify-content: space-between;
@@ -1800,6 +1827,12 @@ body.is-fullscreen .reveal .slides section.org-scope-slide {
 }
 
 .scope-orbit {
+  --scope-orbit-center-x: 50%;
+  --scope-orbit-center-y: 52%;
+  --scope-orbit-outer-width: 82%;
+  --scope-orbit-outer-height: 72%;
+  --scope-orbit-inner-width: 56%;
+  --scope-orbit-inner-height: 52%;
   position: relative;
   flex: 0 0 auto;
   height: 320px;
@@ -1826,67 +1859,70 @@ body.is-fullscreen .reveal .slides section.org-scope-slide {
 }
 
 .scope-orbit__label--outer {
-  top: 42px;
-  left: 16%;
-  transform: rotate(-12deg);
+  top: 40px;
+  left: 12%;
+  transform: rotate(-10deg);
 }
 
 .scope-orbit__label--inner {
-  top: 86px;
-  right: 19%;
-  transform: rotate(11deg);
+  top: 82px;
+  right: 24%;
+  transform: rotate(9deg);
 }
 
 .scope-orbit__ring {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: var(--scope-orbit-center-y);
+  left: var(--scope-orbit-center-x);
   border: 1px solid rgba(20, 86, 217, 0.22);
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
 .scope-orbit__ring--outer {
-  width: 92%;
-  height: 76%;
+  width: var(--scope-orbit-outer-width);
+  height: var(--scope-orbit-outer-height);
 }
 
 .scope-orbit__ring--inner {
-  width: 66%;
-  height: 54%;
+  width: var(--scope-orbit-inner-width);
+  height: var(--scope-orbit-inner-height);
   border-color: rgba(25, 21, 21, 0.16);
 }
 
 .scope-core {
   position: absolute;
-  top: 50%;
+  top: var(--scope-orbit-center-y);
   left: 50%;
   z-index: 2;
   display: grid;
-  gap: 6px;
-  width: min(48%, 280px);
-  padding: 16px 18px;
-  border-radius: 26px;
+  place-items: center;
+  width: clamp(124px, 24%, 142px);
+  aspect-ratio: 1 / 1;
+  padding: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(20, 86, 217, 0.12);
   background:
-    radial-gradient(circle at center, rgba(20, 86, 217, 0.18), rgba(255, 255, 255, 0.98) 74%),
-    rgba(255, 255, 255, 0.92);
+    radial-gradient(circle at 50% 42%, rgba(20, 86, 217, 0.16), rgba(255, 255, 255, 0.98) 68%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.94));
   text-align: center;
-  box-shadow: 0 18px 42px rgba(20, 86, 217, 0.14);
+  box-shadow: 0 20px 44px rgba(20, 86, 217, 0.14);
   transform: translate(-50%, -50%);
 }
 
-.scope-core span {
-  color: var(--ink-soft);
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.25;
+.scope-core__logo {
+  width: min(82%, 96px);
+  height: auto;
+  object-fit: contain;
 }
 
-.scope-core strong {
-  font-family: var(--font-heading);
-  font-size: 27px;
-  line-height: 1;
-  letter-spacing: -0.04em;
+.scope-core__name {
+  color: var(--blue);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .scope-node {
@@ -1918,63 +1954,63 @@ body.is-fullscreen .reveal .slides section.org-scope-slide {
 }
 
 .scope-node--operaciones {
-  top: 7%;
-  left: 33%;
-  width: 23%;
-}
-
-.scope-node--mercados {
-  top: 31%;
-  left: 2%;
-  width: 21%;
-}
-
-.scope-node--juridico {
-  bottom: 10%;
-  left: 8%;
-  width: 22%;
-}
-
-.scope-node--financiero {
-  top: 14%;
-  right: 4%;
+  top: 9%;
+  left: 34%;
   width: 24%;
 }
 
+.scope-node--mercados {
+  top: 33%;
+  left: 2.5%;
+  width: 20%;
+}
+
+.scope-node--juridico {
+  bottom: 11%;
+  left: 8.5%;
+  width: 20%;
+}
+
+.scope-node--financiero {
+  top: 17%;
+  right: 5.5%;
+  width: 21%;
+}
+
 .scope-node--cobros {
-  top: 58%;
-  right: 0;
-  width: 28%;
+  top: 64%;
+  right: 4%;
+  width: 21%;
 }
 
 .scope-node--riesgos {
-  bottom: 6%;
-  left: 56%;
-  width: 20%;
+  bottom: 4%;
+  left: 54%;
+  width: 16%;
 }
 
 .scope-node--espana {
   top: 25%;
   left: 24%;
-  width: 21%;
+  width: 19%;
 }
 
 .scope-node--portugal {
-  top: 42%;
-  right: 12%;
-  width: 21%;
+  top: 46%;
+  right: 15%;
+  width: 16%;
 }
 
 .scope-node--irlanda {
   bottom: 12%;
-  left: 29%;
-  width: 20%;
+  left: 30%;
+  width: 17%;
 }
 
 .scope-node--bkcf {
-  bottom: 17%;
-  right: 25%;
-  width: 18%;
+  bottom: 18%;
+  right: 28%;
+  width: 13%;
 }
 
 .stakeholder-layout,
@@ -3627,13 +3663,13 @@ body.is-fullscreen .reveal .slides section.org-scope-slide {
     min-height: 380px;
   }
 
-  .network-core {
-    width: 100%;
-    height: auto;
-    min-height: 120px;
-    border-radius: 28px;
-    margin-bottom: 6px;
-    padding: 18px;
+  .scope-core {
+    width: clamp(108px, 26%, 124px);
+    padding: 12px;
+  }
+
+  .scope-core__logo {
+    width: min(84%, 82px);
   }
 
   .slide-footer {
@@ -4843,5 +4879,77 @@ body.is-fullscreen .reveal .slides section.timeline-story-slide {
   .timeline-process-list,
   .timeline-detail-metrics {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 901px) {
+  .reveal .slides section.timeline-story-slide {
+    --timeline-top-padding: 48px;
+    --timeline-bottom-padding: 18px;
+    padding-top: var(--timeline-top-padding);
+    padding-bottom: var(--timeline-bottom-padding);
+  }
+
+  body.is-fullscreen .reveal .slides section.timeline-story-slide {
+    --timeline-top-padding: 56px;
+    --timeline-bottom-padding: 14px;
+  }
+
+  .reveal .slides section.timeline-story-slide .slide-frame {
+    min-height: calc(100vh - var(--timeline-top-padding) - var(--timeline-bottom-padding));
+    gap: 0;
+  }
+
+  .reveal .slides section.timeline-story-slide .timeline-story__sticky {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .reveal .slides section.timeline-story-slide .timeline-story__head {
+    display: grid;
+    grid-template-columns: minmax(360px, 0.74fr) minmax(0, 1fr);
+    gap: 18px;
+    align-items: flex-start;
+    min-height: 82px;
+  }
+
+  .reveal .slides section.timeline-story-slide .timeline-canvas {
+    padding: 14px 16px 16px;
+  }
+
+  .reveal .slides section.timeline-story-slide .timeline-canvas__hud {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .reveal .slides section.timeline-story-slide .timeline-canvas__viewport,
+  .reveal .slides section.timeline-story-slide.timeline-story-slide--dense .timeline-canvas__viewport,
+  .reveal .slides section.timeline-story-slide.timeline-story-slide--dense-strong .timeline-canvas__viewport {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(292px, 0.82fr);
+    grid-template-areas:
+      "axis axis"
+      "requesters processes";
+    gap: 8px 10px;
+  }
+
+  .reveal .slides section.timeline-story-slide .timeline-axis-shell,
+  .reveal .slides section.timeline-story-slide.timeline-story-slide--dense .timeline-axis-shell,
+  .reveal .slides section.timeline-story-slide.timeline-story-slide--dense-strong .timeline-axis-shell {
+    position: relative;
+    grid-area: axis;
+    min-height: 164px;
+    overflow: hidden;
+  }
+
+  .reveal .slides section.timeline-story-slide .timeline-detail-card--requesters {
+    grid-area: requesters;
+  }
+
+  .reveal .slides section.timeline-story-slide .timeline-detail-card--processes {
+    grid-area: processes;
   }
 }
