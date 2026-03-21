@@ -72,10 +72,17 @@
       ></button>
       <button
         class="story-rail__dot"
+        data-slide-target="s04-proceso-ejemplo"
+        type="button"
+        aria-label="Ir a S05 Proceso ejemplo"
+        title="S05"
+      ></button>
+      <button
+        class="story-rail__dot"
         data-slide-target="s06-revenue"
         type="button"
-        aria-label="Ir a S06 Revenue"
-        title="S06"
+        aria-label="Ir a S07 Revenue"
+        title="S07"
       ></button>
       <button
         class="story-rail__dot"
@@ -87,6 +94,7 @@
       <button
         class="story-rail__dot"
         data-slide-target="s09-ia"
+        data-slide-group="ia-bonus"
         type="button"
         aria-label="Ir a S09 Presentacion hecha con IA"
         title="S09"
@@ -233,7 +241,7 @@
           id="s06-revenue"
           class="deck-slide revenue-slide data-story-slide animate-section"
           data-rail="growth"
-          data-slide-ref="S06"
+          data-slide-ref="S07"
           data-slide-label="Revenue"
         >
           <div class="slide-frame">
@@ -698,169 +706,27 @@
 
         <section
           id="s04-proceso-ejemplo"
-          class="deck-slide process-example-slide data-story-slide animate-section"
+          class="deck-slide process-example-slide data-story-slide"
           data-rail="appendix"
-          data-rail-group="team-journey"
-          data-slide-ref="S04"
+          data-slide-ref="S05"
           data-slide-label="Proceso ejemplo"
+          data-transition="none"
         >
           <div class="slide-frame">
-            <div class="process-example-layout">
-              <aside class="process-example-copy">
-                <div class="process-example-copy__head">
-                  <span class="process-example-copy__marker" aria-hidden="true"></span>
-                  <div>
-                    <p class="eyebrow">Proceso ejemplo</p>
-                    <h2>Bastanteos con IA: menos fricci&oacute;n operativa, mismo control.</h2>
-                    <p class="section-caption">
-                      La IA clasifica y pre-rellena; Appian/ARGO orquesta; el experto valida
-                      con evidencia sobre el PDF.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="process-metric-grid" aria-label="Indicadores del proceso de bastanteos con IA">
-                  <article class="metric-card process-metric-card">
-                    <strong class="process-metric-card__value">70k</strong>
-                    <span class="process-metric-card__label">operaciones / a&ntilde;o</span>
-                  </article>
-                  <article class="metric-card process-metric-card">
-                    <strong class="process-metric-card__value">50+</strong>
-                    <span class="process-metric-card__label">tipolog&iacute;as / documentales</span>
-                  </article>
-                  <article class="metric-card process-metric-card">
-                    <strong class="process-metric-card__value">80+</strong>
-                    <span class="process-metric-card__label">facultades / a interpretar</span>
-                  </article>
-                  <article class="metric-card process-metric-card">
-                    <strong class="process-metric-card__value">299k&euro;</strong>
-                    <span class="process-metric-card__label">ahorro potencial / m&aacute;ximo</span>
-                  </article>
-                </div>
-
-                <article class="callout dark process-example-callout">
-                  <p>Industrializamos un proceso jur&iacute;dico cr&iacute;tico sin automatizaci&oacute;n ciega.</p>
-                </article>
-              </aside>
-
-              <div
-                class="process-example-stage"
-                role="img"
-                aria-label="Modelo de bastanteos con IA con vista del documento, formulario estructurado y flujo entre PDF, OCR, IA, validacion humana y ARGO."
-              >
-                <div class="process-example-stage__surface">
-                  <span class="process-example-stage__tag">Como se ve el modelo</span>
-
-                  <div class="process-example-preview">
-                    <article class="process-mock process-mock--pdf" aria-hidden="true">
-                      <div class="process-mock__chrome">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                      <div class="process-mock__document">
-                        <span class="process-mock__line process-mock__line--xl"></span>
-                        <span class="process-mock__line process-mock__line--m"></span>
-                        <span class="process-mock__line process-mock__line--s"></span>
-                        <span class="process-mock__line process-mock__line--l"></span>
-                        <span class="process-mock__line process-mock__line--m"></span>
-                        <span class="process-mock__line process-mock__line--xs"></span>
-                        <span class="process-mock__highlight process-mock__highlight--main"></span>
-                        <span class="process-mock__highlight process-mock__highlight--secondary"></span>
-                        <span class="process-mock__stamp">Poder</span>
-                      </div>
-                    </article>
-
-                    <div class="process-example-preview__link" aria-hidden="true"></div>
-
-                    <article class="process-mock process-mock--form" aria-hidden="true">
-                      <div class="process-mock__headerbar">Generacion de Bastanteos con IA</div>
-                      <div class="process-form-grid">
-                        <div class="process-form-row">
-                          <span>NIF Sociedad</span>
-                          <strong>G87654</strong>
-                          <em>OCR</em>
-                        </div>
-                        <div class="process-form-row">
-                          <span>Critico</span>
-                          <strong>SI</strong>
-                          <em>IA</em>
-                        </div>
-                        <div class="process-form-row">
-                          <span>Fecha validez</span>
-                          <strong>03/06/2025</strong>
-                          <em>OCR</em>
-                        </div>
-                        <div class="process-form-row process-form-row--accent">
-                          <span>Facultad del mandante</span>
-                          <strong>ADMINISTRATIVO</strong>
-                          <em>IA</em>
-                        </div>
-                        <div class="process-form-row">
-                          <span>Tipo de bastanteo</span>
-                          <strong>Poder de pleitos</strong>
-                          <em>IA</em>
-                        </div>
-                        <div class="process-form-row">
-                          <span>Documento</span>
-                          <strong>Escritura</strong>
-                          <em>PDF</em>
-                        </div>
-                        <div class="process-form-row">
-                          <span>Notario</span>
-                          <strong>Paz Garc&iacute;a</strong>
-                          <em>OCR</em>
-                        </div>
-                        <div class="process-form-row">
-                          <span>Dictamen</span>
-                          <strong>Apto con validaci&oacute;n</strong>
-                          <em>ARGO</em>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-
-                  <p class="process-example-proof">
-                    Lo diferencial: la persona valida cada atributo sobre la evidencia del documento.
-                  </p>
-
-                  <div class="process-flow">
-                    <article class="process-step process-step--pdf">
-                      <span class="process-step__token">PDF</span>
-                      <p>La documentaci&oacute;n entra al alta y se normaliza para el bastanteo.</p>
-                    </article>
-                    <article class="process-step process-step--ocr">
-                      <span class="process-step__token">OCR</span>
-                      <p>Se captura el texto base y se estructura el contenido documental.</p>
-                    </article>
-                    <article class="process-step process-step--ia">
-                      <span class="process-step__token">IA</span>
-                      <p>La IA clasifica el documento y propone atributos y dictamen.</p>
-                    </article>
-                    <article class="process-step process-step--human">
-                      <span class="process-step__token">VAL</span>
-                      <p>La persona valida cada dato contra la evidencia exacta del PDF.</p>
-                    </article>
-                    <article class="process-step process-step--argo">
-                      <span class="process-step__token">ARGO</span>
-                      <p>La plataforma integra el resultado y deja trazabilidad operativa.</p>
-                    </article>
-                  </div>
-
-                  <div class="process-phase-row" aria-label="Lectura resumida del modelo">
-                    <span class="process-phase-pill">IA prepara</span>
-                    <span class="process-phase-pill">humano decide</span>
-                    <span class="process-phase-pill">plataforma integra</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <figure class="process-example-static-figure">
+              <img
+                class="process-example-static-image"
+                src="imagenes/bastanteos-slide-fija.png"
+                alt="Slide fija de Bastanteos con IA con KPIs, captura del modelo y flujo operativo."
+                loading="lazy"
+              />
+            </figure>
           </div>
         </section>
 
         <section
           id="s08-competidores"
-          class="deck-slide competitor-slide animate-section"
+          class="deck-slide competitor-slide data-story-slide animate-section"
           data-rail="market"
           data-slide-ref="S08"
           data-slide-label="Competidores"
@@ -869,258 +735,230 @@
             <div class="section-heading">
               <div>
                 <p class="eyebrow">Paisaje competitivo</p>
-                <h2>
-                  En Bankinter, el espacio de procesos y Appian se cruza siempre con
-                  cuatro nombres reconocibles.
-                </h2>
+                <h2>Principales players en Bankinter</h2>
               </div>
-              <article class="competitor-note competitor-note--header">
-                <span class="competitor-note__label">Lectura ejecutiva</span>
-                <p>
-                  VASS, Accenture, EY y Softtek aparecen como referencias recurrentes
-                  cuando el banco piensa en capacidad de transformaci&oacute;n,
-                  industrializaci&oacute;n y credibilidad en la cuenta.
-                </p>
-              </article>
             </div>
 
-            <div class="competitor-layout">
-              <aside class="competitor-intro">
-                <article class="competitor-note competitor-note--lead">
-                  <span class="competitor-note__label">Como leer esta slide</span>
-                  <p>
-                    No es un ranking cerrado. Es el mapa mental m&aacute;s frecuente
-                    cuando Bankinter compara proveedores con conversaci&oacute;n real en
-                    procesos y algo de tracci&oacute;n en Appian.
-                  </p>
-                </article>
-
-                <div class="competitor-pill-cloud" aria-label="Temas que activan la comparacion">
-                  <span class="competitor-pill">Procesos</span>
-                  <span class="competitor-pill">Automatizacion</span>
-                  <span class="competitor-pill">Appian</span>
-                  <span class="competitor-pill">Delivery</span>
+            <div class="competitor-list" aria-label="Principales players en Bankinter">
+              <article class="competitor-entry competitor-entry--vass">
+                <div class="competitor-brand-panel competitor-brand-panel--vass">
+                  <img
+                    class="competitor-brand-panel__logo competitor-brand-panel__logo--vass"
+                    src="./assets/competitors/vass.png"
+                    alt="Logo de VASS"
+                  />
                 </div>
-              </aside>
-
-              <div
-                class="competitor-arena"
-                role="img"
-                aria-label="Mapa competitivo con VASS, Accenture, EY y Softtek alrededor del nucleo de procesos, BPM y Appian en Bankinter."
-              >
-                <article class="competitor-core">
-                  <span class="competitor-core__label">Terreno de juego</span>
-                  <strong>Procesos, BPM y Appian</strong>
+                <div class="competitor-entry__note">
+                  <span class="competitor-entry__tag">Appian historico</span>
                   <p>
-                    Ah&iacute; es donde Bankinter compara presencia, credibilidad y
-                    capacidad de ejecuci&oacute;n.
+                    Competidor principal. Hist&oacute;ricamente muy fuerte en Appian
+                    cuando Bankinter fue uno de los clientes principales.
+                    Actualmente responsable de producci&oacute;n en Bankinter, pero
+                    perdiendo presencia poco a poco.
                   </p>
-                  <div class="competitor-core__chips">
-                    <span>Cuenta</span>
-                    <span>Delivery</span>
-                    <span>Low-code</span>
-                  </div>
-                </article>
-
-                <div class="competitor-grid">
-                  <article class="competitor-card competitor-card--vass">
-                    <div class="competitor-card__logo-shell competitor-card__logo-shell--dark">
-                      <img
-                        class="competitor-card__logo competitor-card__logo--vass"
-                        src="./assets/competitors/vass.png"
-                        alt="Logo de VASS"
-                      />
-                    </div>
-                    <div class="competitor-card__copy">
-                      <span class="competitor-card__domain">Procesos + delivery</span>
-                      <strong>VASS</strong>
-                      <p>
-                        Presencia visible cuando la conversaci&oacute;n baja a
-                        f&aacute;brica, continuidad operativa y transformaci&oacute;n de
-                        procesos.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="competitor-card competitor-card--accenture">
-                    <div class="competitor-card__logo-shell">
-                      <img
-                        class="competitor-card__logo competitor-card__logo--accenture"
-                        src="./assets/competitors/accenture.svg"
-                        alt="Logo de Accenture"
-                      />
-                    </div>
-                    <div class="competitor-card__copy">
-                      <span class="competitor-card__domain">Transformacion a escala</span>
-                      <strong>Accenture</strong>
-                      <p>
-                        Competidor natural cuando el banco busca marca global,
-                        capacidad de programa y relato de transformaci&oacute;n amplio.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="competitor-card competitor-card--ey">
-                    <div class="competitor-card__logo-shell competitor-card__logo-shell--ey">
-                      <img
-                        class="competitor-card__logo competitor-card__logo--ey"
-                        src="./assets/competitors/ey-logo-black.png"
-                        alt="Logo de EY"
-                      />
-                    </div>
-                    <div class="competitor-card__copy">
-                      <span class="competitor-card__domain">Cambio + advisory</span>
-                      <strong>EY</strong>
-                      <p>
-                        Entra en la conversaci&oacute;n cuando procesos y
-                        transformaci&oacute;n se conectan con narrativa ejecutiva y
-                        sponsorship.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="competitor-card competitor-card--softtek">
-                    <div class="competitor-card__logo-shell competitor-card__logo-shell--softtek">
-                      <img
-                        class="competitor-card__logo competitor-card__logo--softtek"
-                        src="./assets/competitors/softtek.svg"
-                        alt="Logo de Softtek"
-                      />
-                    </div>
-                    <div class="competitor-card__copy">
-                      <span class="competitor-card__domain">Capacidad industrial</span>
-                      <strong>Softtek</strong>
-                      <p>
-                        Jugador a tener en cuenta cuando se valora delivery sostenido,
-                        escalabilidad y modelo de f&aacute;brica.
-                      </p>
-                    </div>
-                  </article>
                 </div>
-              </div>
+              </article>
+
+              <article class="competitor-entry competitor-entry--ey">
+                <div class="competitor-brand-panel competitor-brand-panel--ey">
+                  <img
+                    class="competitor-brand-panel__logo competitor-brand-panel__logo--ey"
+                    src="./assets/competitors/ey-logo-black.png"
+                    alt="Logo de EY"
+                  />
+                </div>
+                <div class="competitor-entry__note">
+                  <span class="competitor-entry__tag"
+                    >Transformacion de procesos</span
+                  >
+                  <p>
+                    Competidor fuerte en transformaci&oacute;n de procesos.
+                    Usualmente en el levantamiento o redise&ntilde;o funcional, y en
+                    procesos principales del banco como Hipotecario, pero con
+                    limitadas capacidades de delivery y ejecuci&oacute;n en Appian.
+                  </p>
+                </div>
+              </article>
+
+              <article class="competitor-entry competitor-entry--accenture">
+                <div class="competitor-brand-panel competitor-brand-panel--accenture">
+                  <img
+                    class="competitor-brand-panel__logo competitor-brand-panel__logo--accenture"
+                    src="./assets/competitors/accenture.svg"
+                    alt="Logo de Accenture"
+                  />
+                </div>
+                <div class="competitor-entry__note">
+                  <span class="competitor-entry__tag">Legado y migraciones</span>
+                  <p>
+                    Procesos y migraciones realizadas en los inicios. Actualmente
+                    todav&iacute;a hay procesos desarrollados por ellos, pero con
+                    presencia residual en ecosistema Appian.
+                  </p>
+                </div>
+              </article>
+
+              <article class="competitor-entry competitor-entry--softtek">
+                <div class="competitor-brand-panel competitor-brand-panel--softtek">
+                  <img
+                    class="competitor-brand-panel__logo competitor-brand-panel__logo--softtek"
+                    src="./assets/competitors/softtek.svg"
+                    alt="Logo de Softtek"
+                  />
+                </div>
+                <div class="competitor-entry__note">
+                  <span class="competitor-entry__tag">Presencia oportunista</span>
+                  <p>
+                    Presentes pero con perfiles m&aacute;s oportunistas, de jefatura
+                    de proyecto, de integraci&oacute;n de APIs, etc.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
         <section
           id="s09-ia"
-          class="deck-slide ai-tools-slide dark-quarter data-story-slide animate-section"
+          class="deck-slide ai-origin-slide data-story-slide animate-section"
           data-rail="ia"
+          data-rail-group="ia-bonus"
           data-slide-ref="S09"
           data-slide-label="Presentacion hecha con IA"
         >
           <div class="slide-frame">
-            <div class="ambient ambient--orange ambient--dense" aria-hidden="true"></div>
-            <div class="ambient ambient--blue ambient--dense" aria-hidden="true"></div>
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">Presentacion hecha con IA</p>
-                <h2>De una conversacion a un deck navegable y editable.</h2>
-              </div>
-              <p class="section-caption">
-                ChatGPT ayuda a sintetizar el relato, Codex ejecuta cambios end-to-end sobre el
-                deck, GitHub Copilot acelera remates de codigo y reveal.js pone el motor de
-                navegacion.
+            <div class="ambient ambient--orange" aria-hidden="true"></div>
+            <div class="ambient ambient--blue" aria-hidden="true"></div>
+
+            <div class="ai-origin-heading">
+              <p class="eyebrow">
+                Adopcion de la IA en el delivery
+                <span class="ai-origin-heading__bonus">Bonus track</span>
               </p>
+              <h2>Presentacion hecha con IA desde cero.</h2>
             </div>
 
-            <div class="ai-tools-layout">
-              <div class="ai-tool-grid" aria-label="Tecnologias usadas para construir la presentacion">
-                <article class="ai-tool-card ai-tool-card--chatgpt">
-                  <div class="ai-tool-card__logo-shell ai-tool-card__logo-shell--openai">
+            <div class="ai-origin-layout">
+              <figure class="ai-origin-shot ai-origin-shot--brief">
+                <img
+                  class="ai-origin-shot__image"
+                  src="./imagenes/eleccion%20tecnologia.png"
+                  alt="Conversacion sobre la tecnologia recomendada para construir la presentacion."
+                  loading="lazy"
+                />
+              </figure>
+
+              <div class="ai-origin-stack">
+                <article class="ai-origin-badge" aria-label="ChatGPT">
+                  <div class="ai-origin-badge__mark">
                     <img
-                      class="ai-tool-card__logo"
                       src="./assets/ai-tools/openai-blossom-mark.svg"
                       alt="Simbolo de OpenAI usado como base visual de ChatGPT"
                     />
                   </div>
-                  <div class="ai-tool-card__copy">
-                    <span class="ai-tool-card__eyebrow">Narrativa</span>
-                    <h3>ChatGPT</h3>
-                    <p>Ordena el storyline, resume ideas y ayuda a convertir notas sueltas en mensajes ejecutivos.</p>
+                  <div class="ai-origin-badge__copy">
+                    <strong>ChatGPT</strong>
                   </div>
                 </article>
 
-                <article class="ai-tool-card ai-tool-card--codex">
-                  <div class="ai-tool-card__logo-shell ai-tool-card__logo-shell--codex">
-                    <img
-                      class="ai-tool-card__logo"
-                      src="./assets/ai-tools/openai-blossom-mark.svg"
-                      alt="Simbolo de OpenAI usado como base visual de Codex"
-                    />
-                  </div>
-                  <div class="ai-tool-card__copy">
-                    <span class="ai-tool-card__eyebrow">Implementacion</span>
-                    <h3>Codex</h3>
-                    <p>Aplica cambios reales en HTML, CSS y JS, reordena slides, ajusta layout y valida el resultado.</p>
-                  </div>
-                </article>
+                <figure class="ai-origin-shot ai-origin-shot--demo">
+                  <img
+                    class="ai-origin-shot__image"
+                    src="./imagenes/pregunta%20demo.png"
+                    alt="Conversacion sobre ejemplos de demo de reveal.js."
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                <article class="ai-tool-card ai-tool-card--copilot">
-                  <div class="ai-tool-card__logo-shell ai-tool-card__logo-shell--copilot">
+        <section
+          id="s09-ia-codex"
+          class="deck-slide ai-build-slide data-story-slide animate-section"
+          data-rail="ia"
+          data-rail-group="ia-bonus"
+          data-slide-ref="S09"
+          data-slide-label="Presentacion hecha con IA"
+        >
+          <div class="slide-frame">
+            <div class="ambient ambient--orange" aria-hidden="true"></div>
+            <div class="ambient ambient--blue" aria-hidden="true"></div>
+
+            <div class="ai-build-heading">
+              <p class="eyebrow">
+                Adopcion de la IA en el delivery
+                <span class="ai-build-heading__bonus">Bonus track</span>
+              </p>
+              <h2>Presentacion hecha con IA desde cero.</h2>
+            </div>
+
+            <div class="ai-build-layout">
+              <figure class="ai-build-shot">
+                <img
+                  class="ai-build-shot__image"
+                  src="./imagenes/Peticion%20Codex.png"
+                  alt="Peticion inicial a Codex para construir la presentacion desde un repositorio vacio."
+                  loading="lazy"
+                />
+              </figure>
+
+              <div class="ai-build-side">
+                <div class="ai-build-tool-row" aria-label="Herramientas usadas en la construccion">
+                  <article class="ai-build-tool">
+                    <div class="ai-build-tool__mark-shell">
+                      <img
+                        class="ai-build-tool__mark"
+                        src="./assets/ai-tools/openai-blossom-mark.svg"
+                        alt="Icono usado para representar Codex"
+                      />
+                    </div>
+                    <div class="ai-build-tool__copy ai-build-tool__copy--centered">
+                      <span>OpenAI</span>
+                      <strong>Codex</strong>
+                    </div>
+                  </article>
+
+                  <article class="ai-build-tool ai-build-tool--copilot">
                     <img
-                      class="ai-tool-card__logo"
+                      class="ai-build-tool__logo ai-build-tool__logo--copilot"
                       src="./assets/ai-tools/github-copilot-logo.svg"
                       alt="Logo de GitHub Copilot"
                     />
-                  </div>
-                  <div class="ai-tool-card__copy">
-                    <span class="ai-tool-card__eyebrow">Aceleracion</span>
-                    <h3>GitHub Copilot</h3>
-                    <p>Sirve de apoyo para snippets, remates repetitivos y pequeñas iteraciones sobre el codigo.</p>
-                  </div>
-                </article>
+                    <div class="ai-build-tool__copy ai-build-tool__copy--centered">
+                      <span>GitHub</span>
+                      <strong>Copilot</strong>
+                    </div>
+                  </article>
 
-                <article class="ai-tool-card ai-tool-card--reveal">
-                  <div class="ai-tool-card__logo-shell ai-tool-card__logo-shell--reveal">
+                  <article class="ai-build-tool ai-build-tool--reveal">
                     <img
-                      class="ai-tool-card__logo"
+                      class="ai-build-tool__logo ai-build-tool__logo--reveal"
                       src="./assets/ai-tools/revealjs-logo.svg"
                       alt="Logo de reveal.js"
                     />
-                  </div>
-                  <div class="ai-tool-card__copy">
-                    <span class="ai-tool-card__eyebrow">Motor</span>
-                    <h3>reveal.js</h3>
-                    <p>Convierte todo lo anterior en una presentacion web: scroll, rail lateral, fragments y navegacion.</p>
-                  </div>
+                    <div class="ai-build-tool__copy ai-build-tool__copy--centered">
+                      <span>Framework</span>
+                      <strong>reveal.js</strong>
+                    </div>
+                  </article>
+                </div>
+
+                <article class="ai-build-note">
+                  <span class="ai-build-note__eyebrow">Como se encadena</span>
+                  <p>
+                    ChatGPT desbloquea la idea inicial y recomienda la tecnologia
+                    con la que merece la pena construir. A partir de ahi, Codex
+                    opera ya sobre el repositorio real: crea estructura, modifica
+                    HTML, CSS y JS, reordena slides y valida el resultado con
+                    navegador real. GitHub Copilot acelera remates pequeños y
+                    snippets, mientras reveal.js pone el motor de scroll,
+                    navegacion y transiciones. La combinacion convierte feedback en
+                    cambios reales sobre el deck, no en una demo estatica.
+                  </p>
                 </article>
               </div>
-
-              <aside class="ai-process-panel" aria-label="Como se construye la presentacion con IA">
-                <span class="ai-process-panel__eyebrow">Como se llega</span>
-                <h3>Secuencia de trabajo</h3>
-                <div class="ai-process-list">
-                  <article class="ai-process-step">
-                    <span class="ai-process-step__index">01</span>
-                    <div>
-                      <strong>Guion y mensaje</strong>
-                      <p>Se parte de notas, feedback y objetivos. ChatGPT ayuda a compactar la historia y a definir el titular de cada slide.</p>
-                    </div>
-                  </article>
-
-                  <article class="ai-process-step">
-                    <span class="ai-process-step__index">02</span>
-                    <div>
-                      <strong>Construccion del deck</strong>
-                      <p>Codex aterriza la propuesta en el proyecto real: HTML, CSS, JS, orden de slides, rail y validacion local.</p>
-                    </div>
-                  </article>
-
-                  <article class="ai-process-step">
-                    <span class="ai-process-step__index">03</span>
-                    <div>
-                      <strong>Pulido y entrega</strong>
-                      <p>Copilot acelera ajustes pequenos y reveal.js deja una presentacion versionable, navegable y facil de iterar.</p>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="ai-process-note">
-                  <span>Resultado</span>
-                  <p>Una presentacion que no nace en PowerPoint: nace como producto web, editable en Git y afinable por iteraciones cortas.</p>
-                </div>
-              </aside>
             </div>
           </div>
         </section>
@@ -1135,52 +973,13 @@
           <div class="slide-frame">
             <div class="ambient ambient--orange ambient--dense" aria-hidden="true"></div>
             <div class="ambient ambient--blue ambient--dense" aria-hidden="true"></div>
-            <div class="close-layout finale-layout">
-              <div class="finale-copy">
-                <p class="eyebrow">Cierre</p>
-                <h2>Seguimos construyendo la siguiente escala.</h2>
-                <p class="lead">
-                  Bankinter y NTT DATA llegan a este punto con una capacidad Appian ya visible:
-                  mas industrial, mas transversal y lista para el siguiente salto.
-                </p>
-
-                <div class="finale-logo-row" aria-label="Logos de Bankinter y NTT DATA">
-                  <div class="finale-logo-card finale-logo-card--bankinter">
-                    <img
-                      class="finale-logo finale-logo--bankinter"
-                      src="./assets/bankinter-wordmark-official.png"
-                      alt="Bankinter"
-                    />
-                  </div>
-                  <div class="finale-logo-card finale-logo-card--ntt">
-                    <img
-                      class="finale-logo finale-logo--ntt"
-                      src="./assets/ntt-data-wordmark.svg"
-                      alt="NTT DATA"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="finale-visual"
-                role="img"
-                aria-label="Composicion abstracta de cierre con horizonte, reflejos de luz y capas en tonos Bankinter y NTT DATA."
-              >
-                <div class="finale-visual__glow finale-visual__glow--orange"></div>
-                <div class="finale-visual__glow finale-visual__glow--blue"></div>
-                <div class="finale-visual__grid"></div>
-                <div class="finale-visual__horizon"></div>
-                <div class="finale-visual__ring"></div>
-                <div class="finale-visual__glass">
-                  <span>2026</span>
-                  <strong>Next scale</strong>
-                  <p>
-                    Appian, IA y delivery industrial como capacidad ya reconocible en la
-                    cuenta.
-                  </p>
-                </div>
-              </div>
+            <div class="close-layout finale-quote-layout">
+              <article class="finale-quote-card">
+                <blockquote class="finale-quote">
+                  <p>"La audacia vence, donde la cautela duda"</p>
+                  <cite>- Ley 28. 48 Leyes del Poder.</cite>
+                </blockquote>
+              </article>
             </div>
           </div>
         </section>

@@ -414,6 +414,7 @@ function reorderStaticSlides() {
     "s06-revenue",
     "s08-competidores",
     "s09-ia",
+    "s09-ia-codex",
     "s10-cierre",
   ]
     .map((slideId) => document.getElementById(slideId))
@@ -435,6 +436,7 @@ function renderTimelineSequence() {
   const introDot = rail?.querySelector('[data-slide-target="s01-portada"]');
   const summaryDot = rail?.querySelector('[data-slide-target="s02-resumen"]');
   const teamDot = rail?.querySelector('[data-slide-target="s04-equipo-completo"]');
+  const processDot = rail?.querySelector('[data-slide-target="s04-proceso-ejemplo"]');
 
   if (!slidesRoot || !rail || document.getElementById(TIMELINE_DATA[0].id)) {
     return;
@@ -445,10 +447,12 @@ function renderTimelineSequence() {
   railDot.dataset.slideTarget = TIMELINE_DATA[0].id;
   railDot.dataset.slideGroup = "timeline-journey";
   railDot.type = "button";
-  railDot.setAttribute("aria-label", "Ir a S05 Timeline");
-  railDot.title = "S05";
+  railDot.setAttribute("aria-label", "Ir a S06 Timeline");
+  railDot.title = "S06";
 
-  if (teamDot) {
+  if (processDot) {
+    processDot.insertAdjacentElement("afterend", railDot);
+  } else if (teamDot) {
     teamDot.insertAdjacentElement("afterend", railDot);
   } else if (summaryDot) {
     summaryDot.insertAdjacentElement("afterend", railDot);
@@ -590,7 +594,7 @@ function renderTimelineSequence() {
         class="deck-slide timeline-story-slide timeline-step-slide animate-section ${getTimelineDensityClasses(quarter)}"
         data-rail-group="timeline-journey"
         data-timeline-index="${index}"
-        data-slide-ref="S05"
+        data-slide-ref="S06"
         data-slide-label="Timeline"
         style="--timeline-from-index: ${index}; --timeline-to-index: ${index}; --progress-from: ${renderProgressValue(index)}; --progress-to: ${renderProgressValue(index)};"
       >

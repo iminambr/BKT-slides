@@ -36,7 +36,9 @@
 - Estado narrativo actual del deck a `2026-03-21`:
   - `S03` agrupa dos slides de organizacion bajo la misma parada visual.
   - `S04` agrupa tres slides consecutivas: equipo base, equipo con `Hipotecario` y `Proceso ejemplo`.
-  - La slide `Proceso ejemplo` usa un layout de dos columnas con KPIs a la izquierda y mock de proceso a la derecha; en escritorio no debe colapsar a una sola columna hasta anchos `<= 1200px`.
+  - La slide `Proceso ejemplo` (`S05`) ya no se resuelve como layout editable de dos columnas: queda congelada como composicion fija a pantalla casi completa usando `imagenes/bastanteos-slide-fija.png`.
+  - `S09` se ha dividido en dos slides consecutivas bajo el mismo bonus track: una de origen/descubrimiento con `ChatGPT` y otra de construccion del deck con `OpenAI Codex`, `GitHub Copilot` y `reveal.js`.
+  - `S10` es ahora un cierre claro, de cita unica centrada. Texto exacto: `La audacia vence, donde la cautela duda`.
 - En local siguen existiendo carpetas auxiliares no pensadas para publicacion automatica:
   - `.codex-artifacts/`: capturas y validaciones de agentes,
   - `info/`: materiales de apoyo del usuario.
