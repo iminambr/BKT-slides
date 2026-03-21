@@ -33,6 +33,10 @@
 - El proyecto ya dispone de identificadores visibles por slide (`S01`, `S02`, etc.) y de un fichero `GUION_PRESENTACION.md` para iterar narrativa y datos.
 - `GUION_PRESENTACION.md` ya no debe usarse para contexto general: su funcion es ser el configurador exacto slide a slide, por componentes y texto visible.
 - El proyecto dispone de una carpeta `imagenes/` para referencias visuales externas que luego se citan desde el guion.
+- Estado narrativo actual del deck a `2026-03-21`:
+  - `S03` agrupa dos slides de organizacion bajo la misma parada visual.
+  - `S04` agrupa tres slides consecutivas: equipo base, equipo con `Hipotecario` y `Proceso ejemplo`.
+  - La slide `Proceso ejemplo` usa un layout de dos columnas con KPIs a la izquierda y mock de proceso a la derecha; en escritorio no debe colapsar a una sola columna hasta anchos `<= 1200px`.
 - En local siguen existiendo carpetas auxiliares no pensadas para publicacion automatica:
   - `.codex-artifacts/`: capturas y validaciones de agentes,
   - `info/`: materiales de apoyo del usuario.
@@ -139,6 +143,7 @@
   - usar `work/iteraciones-pendientes` para cambios nuevos,
   - no empujar a `main` salvo instruccion explicita del usuario,
   - revisar antes de publicar que el diff real de la web se limite a archivos del sitio (`index.html`, `styles.css`, `app.js`, `assets/`, etc.) y no incluya artefactos auxiliares.
+  - no anadir al repo ficheros operativos del usuario como `Intrucciones Pendientes.md` ni evidencias locales de validacion salvo peticion explicita.
 - Sobre animaciones y transiciones:
   - no desactivar globalmente las animaciones del deck salvo peticion explicita del usuario,
   - si una transicion entre slides molesta, ajustar primero el mecanismo concreto (`reveal`, `auto-animate`, `fragments` o CSS de esa slide) sin romper las animaciones internas del timeline, barras o cards.

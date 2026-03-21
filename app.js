@@ -17,7 +17,7 @@ const TIMELINE_MOTION_TRANSITION = "980ms cubic-bezier(0.16, 1, 0.3, 1)";
 
 const TIMELINE_DATA = [
   {
-    id: "s02-timeline-2024q4",
+    id: "s05-timeline-2024q4",
     slug: "2024q4",
     label: "2024 Q4",
     summary: "Solicitud del primer proceso",
@@ -41,7 +41,7 @@ const TIMELINE_DATA = [
     processes: ["Requerimientos Judiciales"],
   },
   {
-    id: "s02-timeline-2025q1",
+    id: "s05-timeline-2025q1",
     slug: "2025q1",
     label: "2025 Q1",
     summary: "3 procesos lanzados",
@@ -69,7 +69,7 @@ const TIMELINE_DATA = [
     processes: ["Requerimientos Judiciales", "Seguros Vida Ahorro", "Luxemburgo"],
   },
   {
-    id: "s02-timeline-2025q2",
+    id: "s05-timeline-2025q2",
     slug: "2025q2",
     label: "2025 Q2",
     summary: "4 frentes en paralelo",
@@ -103,7 +103,7 @@ const TIMELINE_DATA = [
     ],
   },
   {
-    id: "s02-timeline-2025q3",
+    id: "s05-timeline-2025q3",
     slug: "2025q3",
     label: "2025 Q3",
     summary: "Primer Proceso Appian + IA",
@@ -153,7 +153,7 @@ const TIMELINE_DATA = [
     ],
   },
   {
-    id: "s02-timeline-2025q4",
+    id: "s05-timeline-2025q4",
     slug: "2025q4",
     label: "2025 Q4",
     summary: "Proveedor Appian Reconocido",
@@ -205,7 +205,7 @@ const TIMELINE_DATA = [
     ],
   },
   {
-    id: "s02-timeline-2026q1",
+    id: "s05-timeline-2026q1",
     slug: "2026q1",
     label: "2026 Q1",
     summary: "Procesos Core: Hipotecario y Embargos",
@@ -265,7 +265,7 @@ const TIMELINE_DATA = [
     ],
   },
   {
-    id: "s02-timeline-2026q2",
+    id: "s05-timeline-2026q2",
     slug: "2026q2",
     label: "2026 Q2",
     summary: "En camino a proveedor principal",
@@ -392,11 +392,49 @@ function getTimelineDensityClasses(quarter) {
   return classes.join(" ");
 }
 
+function reorderStaticSlides() {
+  const slidesRoot = document.querySelector(".reveal .slides");
+
+  if (!slidesRoot) {
+    return;
+  }
+
+  ["s10-stakeholders", "s11-equipo", "s12-cierre"].forEach((slideId) => {
+    document.getElementById(slideId)?.remove();
+  });
+
+  const orderedSlides = [
+    "s01-portada",
+    "s02-resumen",
+    "s07-organizacion-semilla",
+    "s03-organizacion-expansion",
+    "s04-equipo-completo",
+    "s04-equipo-hipotecario",
+    "s04-proceso-ejemplo",
+    "s06-revenue",
+    "s08-competidores",
+    "s09-ia",
+    "s10-cierre",
+  ]
+    .map((slideId) => document.getElementById(slideId))
+    .filter(Boolean);
+
+  orderedSlides.forEach((slide) => {
+    slidesRoot.appendChild(slide);
+  });
+}
+
 function renderTimelineSequence() {
   const slidesRoot = document.querySelector(".reveal .slides");
   const rail = document.querySelector(".story-rail");
   const introSlide = document.getElementById("s01-portada");
+  const summarySlide = document.getElementById("s02-resumen");
+  const teamSlide = document.getElementById("s04-equipo-completo");
+  const teamExpansionSlide = document.getElementById("s04-equipo-hipotecario");
+  const processExampleSlide = document.getElementById("s04-proceso-ejemplo");
   const introDot = rail?.querySelector('[data-slide-target="s01-portada"]');
+  const summaryDot = rail?.querySelector('[data-slide-target="s02-resumen"]');
+  const teamDot = rail?.querySelector('[data-slide-target="s04-equipo-completo"]');
 
   if (!slidesRoot || !rail || document.getElementById(TIMELINE_DATA[0].id)) {
     return;
@@ -407,10 +445,14 @@ function renderTimelineSequence() {
   railDot.dataset.slideTarget = TIMELINE_DATA[0].id;
   railDot.dataset.slideGroup = "timeline-journey";
   railDot.type = "button";
-  railDot.setAttribute("aria-label", "Ir a S02 Timeline");
-  railDot.title = "S02";
+  railDot.setAttribute("aria-label", "Ir a S05 Timeline");
+  railDot.title = "S05";
 
-  if (introDot) {
+  if (teamDot) {
+    teamDot.insertAdjacentElement("afterend", railDot);
+  } else if (summaryDot) {
+    summaryDot.insertAdjacentElement("afterend", railDot);
+  } else if (introDot) {
     introDot.insertAdjacentElement("afterend", railDot);
   } else {
     rail.prepend(railDot);
@@ -548,7 +590,7 @@ function renderTimelineSequence() {
         class="deck-slide timeline-story-slide timeline-step-slide animate-section ${getTimelineDensityClasses(quarter)}"
         data-rail-group="timeline-journey"
         data-timeline-index="${index}"
-        data-slide-ref="S02"
+        data-slide-ref="S05"
         data-slide-label="Timeline"
         style="--timeline-from-index: ${index}; --timeline-to-index: ${index}; --progress-from: ${renderProgressValue(index)}; --progress-to: ${renderProgressValue(index)};"
       >
@@ -557,7 +599,7 @@ function renderTimelineSequence() {
             <div class="timeline-story__head">
               <div>
                 <p class="eyebrow">Timeline</p>
-                <h2 data-id="timeline-title">Como ha sido la historia</h2>
+                <h2 data-id="timeline-title">Cómo ha sido la historia</h2>
               </div>
               <div class="timeline-story__context" data-id="timeline-context">
                 <span class="timeline-story__current-quarter">${escapeHtml(quarter.label)}</span>
@@ -611,23 +653,40 @@ function renderTimelineSequence() {
     `,
   ).join("");
 
-  if (introSlide) {
+  if (processExampleSlide) {
+    processExampleSlide.insertAdjacentHTML("afterend", timelineMarkup);
+  } else if (teamExpansionSlide) {
+    teamExpansionSlide.insertAdjacentHTML("afterend", timelineMarkup);
+  } else if (teamSlide) {
+    teamSlide.insertAdjacentHTML("afterend", timelineMarkup);
+  } else if (summarySlide) {
+    summarySlide.insertAdjacentHTML("afterend", timelineMarkup);
+  } else if (introSlide) {
     introSlide.insertAdjacentHTML("afterend", timelineMarkup);
   } else {
     slidesRoot.insertAdjacentHTML("afterbegin", timelineMarkup);
   }
 }
 
+reorderStaticSlides();
 renderTimelineSequence();
 
 const railDots = Array.from(document.querySelectorAll(".story-rail__dot"));
 const slides = Array.from(document.querySelectorAll(".deck-slide"));
 const fullscreenToggle = document.querySelector("[data-fullscreen-toggle]");
 let activeSlide = null;
-const teamRosterRoot = document.getElementById("team-roster-root");
+const teamRosterRoots = Array.from(document.querySelectorAll("[data-team-roster-root]"));
 
 const TEAM_ROSTER_DATA = {
-  cross: ["Arturo Cercadillo", "Stefania Talpa", "Sofia Pons"],
+  lead: "Arturo Cercadillo",
+  cross: [
+    {
+      name: "Stefania Talpa",
+      tone: "cross-senior",
+    },
+    "Sofia Pons",
+    "Curro Arroyo Cerezo",
+  ],
   ia: ["Ramon Rodriguez", "Aina Caselles"],
   appianLeads: ["Jose Luis Boix", "Carlos Dominguez", "Gema Lopez"],
   appianDelivery: [
@@ -640,10 +699,43 @@ const TEAM_ROSTER_DATA = {
   ],
   hybrid: ["Mercedes Suarez"],
   architecture: ["Tomas Redondo"],
+  architectureNote:
+    "Base de arquitectura e integracion que sostiene el delivery y la escalabilidad del modelo.",
+  rpaMembers: [
+    {
+      name: "Jose Javier Vargas",
+      tone: "rpa-member-lead",
+    },
+    "Virginia Campayo",
+    "Sergio Montes",
+    "Juan Jose Lopez",
+  ],
+  mortgage: [
+    {
+      tone: "mortgage-appian",
+      ariaLabel: "Perfil hipotecario por asignar procedente de Appian",
+      lineWidth: "76%",
+    },
+    {
+      tone: "mortgage-appian-soft",
+      ariaLabel: "Perfil hipotecario por asignar procedente de Appian",
+      lineWidth: "72%",
+    },
+    {
+      tone: "mortgage-ia",
+      ariaLabel: "Perfil hipotecario por asignar procedente de IA",
+      lineWidth: "74%",
+    },
+    {
+      tone: "mortgage-rpa",
+      ariaLabel: "Perfil hipotecario por asignar procedente de RPA",
+      lineWidth: "78%",
+    },
+  ],
 };
 
 function mountTeamRoster() {
-  if (!teamRosterRoot) {
+  if (!teamRosterRoots.length) {
     return;
   }
 
@@ -656,6 +748,25 @@ function mountTeamRoster() {
   }
 
   const h = ReactInstance.createElement;
+
+  function toDataId(value, fallback) {
+    return (
+      String(value || fallback)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "") || fallback
+    );
+  }
+
+  function buildRevealProps(className, enabled, index, extraProps = {}) {
+    return {
+      className: enabled ? `${className} team-reveal-fragment fragment fade-up` : className,
+      ...(enabled ? { "data-fragment-index": index } : {}),
+      ...extraProps,
+    };
+  }
 
   function PersonIcon() {
     return h(
@@ -670,21 +781,52 @@ function mountTeamRoster() {
     );
   }
 
-  function PersonCard({ name, tone, index }) {
+  function normalizePerson(person, defaultTone) {
+    if (typeof person === "string") {
+      return {
+        label: person,
+        ariaLabel: person,
+        tone: defaultTone,
+        dataId: toDataId(person, `${defaultTone}-person`),
+      };
+    }
+
+    return {
+      label: person.label ?? person.name ?? "",
+      ariaLabel:
+        person.ariaLabel ?? person.label ?? person.name ?? "Persona del equipo",
+      tone: person.tone ?? defaultTone,
+      dataId:
+        person.dataId ??
+        toDataId(person.label ?? person.name ?? person.ariaLabel, `${defaultTone}-person`),
+    };
+  }
+
+  function PersonCard({ person, tone, index }) {
+    const normalizedPerson = normalizePerson(person, tone);
+    const nameKey = normalizedPerson.ariaLabel || normalizedPerson.label || `person-${index}`;
+
     return h(
       "article",
       {
-        className: `team-person-card team-person-card--${tone}`,
+        className: [
+          "team-person-card",
+          `team-person-card--${normalizedPerson.tone}`,
+        ]
+          .filter(Boolean)
+          .join(" "),
         style: {
           "--card-index": index,
         },
+        "data-id": normalizedPerson.dataId,
+        "aria-label": normalizedPerson.ariaLabel,
       },
       [
         h(
           "div",
           {
             className: "team-person-card__icon",
-            key: `${name}-icon`,
+            key: `${nameKey}-icon`,
           },
           h(PersonIcon),
         ),
@@ -692,203 +834,356 @@ function mountTeamRoster() {
           "div",
           {
             className: "team-person-card__name",
-            key: `${name}-name`,
+            key: `${nameKey}-name`,
           },
-          name,
+          normalizedPerson.label,
         ),
       ],
     );
   }
 
   function renderPeople(people, tone, startIndex) {
-    return people.map((name, offset) =>
-      h(PersonCard, {
-        key: `${tone}-${name}`,
-        name,
+    return people.map((person, offset) => {
+      const normalizedPerson = normalizePerson(person, tone);
+      const personKey =
+        normalizedPerson.ariaLabel || normalizedPerson.label || `${tone}-${offset}`;
+
+      return h(PersonCard, {
+        key: `${tone}-${personKey}-${offset}`,
+        person,
         tone,
         index: startIndex + offset,
-      }),
+      });
+    });
+  }
+
+  function normalizePlaceholder(placeholder, index) {
+    return {
+      tone: placeholder.tone ?? "mortgage-cross",
+      ariaLabel: placeholder.ariaLabel ?? `Perfil hipotecario por asignar ${index + 1}`,
+      lineWidth: placeholder.lineWidth ?? "72%",
+      dataId: placeholder.dataId ?? `mortgage-slot-${index + 1}`,
+    };
+  }
+
+  function MortgagePlaceholderCard({ placeholder, index }) {
+    const normalizedPlaceholder = normalizePlaceholder(placeholder, index);
+
+    return h(
+      "article",
+      {
+        className: [
+          "team-placeholder-card",
+          `team-placeholder-card--${normalizedPlaceholder.tone}`,
+        ].join(" "),
+        style: {
+          "--card-index": index,
+          "--placeholder-line-width": normalizedPlaceholder.lineWidth,
+        },
+        "data-id": normalizedPlaceholder.dataId,
+        "aria-label": normalizedPlaceholder.ariaLabel,
+      },
+      [
+        h(
+          "div",
+          {
+            className: "team-placeholder-card__icon",
+            key: `${normalizedPlaceholder.dataId}-icon`,
+          },
+          h(PersonIcon),
+        ),
+        h(
+          "div",
+          {
+            className: "team-placeholder-card__line",
+            key: `${normalizedPlaceholder.dataId}-line`,
+            "aria-hidden": "true",
+          },
+        ),
+      ],
     );
   }
 
-  function TeamRoster({ data }) {
-    return h("div", { className: "team-roster-shell" }, [
-      h(
-        "div",
-        {
-          className: "team-board",
-          key: "board",
-          role: "img",
-          "aria-label":
-            "Mapa del equipo Bankinter por capacidades: cross, inteligencia artificial, Appian y arquitectura.",
-        },
-        [
-          h(
-            "div",
-            {
-              className: "team-band team-band--cross",
-              key: "cross-band",
-            },
-            [
-              h(
-                "div",
-                {
-                  className: "team-band__label team-band__label--cross",
-                  key: "cross-label",
-                },
-                "Cross",
-              ),
-              h(
-                "div",
-                {
-                  className: "team-band__content",
-                  key: "cross-content",
-                },
-                renderPeople(data.cross, "cross", 0),
-              ),
-            ],
-          ),
-          h(
-            "div",
-            {
-              className: "team-board__main",
-              key: "main",
-            },
-            [
-              h(
-                "div",
-                {
-                  className: "team-panel team-panel--ia",
-                  key: "ia-panel",
-                },
-                [
-                  h(
-                    "div",
-                    {
-                      className: "team-panel__vertical team-panel__vertical--ia",
-                      key: "ia-label",
-                    },
-                    "IA",
-                  ),
-                  h(
-                    "div",
-                    {
-                      className: "team-ia-stack",
-                      key: "ia-content",
-                    },
-                    renderPeople(data.ia, "ia", 3),
-                  ),
-                ],
-              ),
-              h(
-                "div",
-                {
-                  className: "team-panel team-panel--appian",
-                  key: "appian-panel",
-                },
-                [
-                  h(
-                    "div",
-                    {
-                      className: "team-panel__vertical team-panel__vertical--appian",
-                      key: "appian-label",
-                    },
-                    "Appian",
-                  ),
-                  h(
-                    "div",
-                    {
-                      className: "team-panel__content team-panel__content--appian",
-                      key: "appian-content",
-                    },
-                    [
-                      h(
-                        "div",
-                        {
-                          className: "team-cluster team-cluster--leads",
-                          key: "leads",
-                        },
-                        renderPeople(data.appianLeads, "lead", 5),
-                      ),
-                      h(
-                        "div",
-                        {
-                          className: "team-grid",
-                          key: "delivery",
-                        },
-                        renderPeople(data.appianDelivery, "delivery", 8),
-                      ),
-                      h(
-                        "div",
-                        {
-                          className: "team-support-row",
-                          key: "hybrid",
-                        },
-                        renderPeople(data.hybrid, "hybrid", 14),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
-          h(
-            "div",
-            {
-              className: "team-foundation",
-              key: "foundation",
-            },
-            [
-              h(
-                "div",
-                {
-                  className: "team-foundation__label",
-                  key: "foundation-label",
-                },
-                "ARQ",
-              ),
-              h(
-                "div",
-                {
-                  className: "team-foundation__content",
-                  key: "foundation-content",
-                },
-                [
-                  h(
-                    "div",
-                    {
-                      className: "team-foundation__card",
-                      key: "foundation-card",
-                    },
-                    renderPeople(data.architecture, "arq", 15),
-                  ),
-                  h(
-                    "p",
-                    {
-                      className: "team-foundation__note",
-                      key: "foundation-note",
-                    },
-                    "Base de arquitectura e integracion que sostiene el delivery y la escalabilidad del modelo.",
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
-      ),
-    ]);
+  function renderMortgagePlaceholders(placeholders, startIndex) {
+    return placeholders.map((placeholder, offset) => {
+      const normalizedPlaceholder = normalizePlaceholder(placeholder, offset);
+
+      return h(MortgagePlaceholderCard, {
+        key: `${normalizedPlaceholder.dataId}-${offset}`,
+        placeholder,
+        index: startIndex + offset,
+      });
+    });
   }
 
-  const rosterElement = h(TeamRoster, { data: TEAM_ROSTER_DATA });
+  function TeamRoster({ data, variant }) {
+    const fragmentsEnabled = variant === "base";
+    const showMortgagePanel = variant === "mortgage";
 
-  if (typeof ReactDOMInstance.createRoot === "function") {
-    ReactDOMInstance.createRoot(teamRosterRoot).render(rosterElement);
-    return;
+    return h(
+      "div",
+      {
+        className: [
+          "team-roster-shell",
+          showMortgagePanel ? "team-roster-shell--mortgage" : "",
+        ]
+          .filter(Boolean)
+          .join(" "),
+        "data-id": "team-roster-shell",
+      },
+      [
+        h(
+          "div",
+          buildRevealProps("team-top-lead", fragmentsEnabled, 0, {
+            key: "top-lead",
+            "data-id": "team-top-lead",
+          }),
+          renderPeople([data.lead], "exec", 0),
+        ),
+        h(
+          "div",
+          buildRevealProps("team-board", fragmentsEnabled, 0, {
+            key: "board",
+            "data-id": "team-board",
+            role: "img",
+            "aria-label": showMortgagePanel
+              ? "Mapa del equipo Bankinter por capacidades: liderazgo, cross, inteligencia artificial, Appian, RPA, hipotecario y arquitectura."
+              : "Mapa del equipo Bankinter por capacidades: liderazgo, cross, inteligencia artificial, Appian, RPA y arquitectura.",
+          }),
+          [
+            h(
+              "div",
+              {
+                className: "team-band team-band--cross",
+                key: "cross-band",
+                "data-id": "team-cross-band",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    className: "team-band__label team-band__label--cross",
+                    key: "cross-label",
+                  },
+                  "Cross",
+                ),
+                h(
+                  "div",
+                  {
+                    className: "team-band__content",
+                    key: "cross-content",
+                  },
+                  renderPeople(data.cross, "cross", 1),
+                ),
+              ],
+            ),
+            h(
+              "div",
+              {
+                className: [
+                  "team-board__main",
+                  showMortgagePanel ? "team-board__main--mortgage" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" "),
+                key: "main",
+                "data-id": "team-board-main",
+              },
+              [
+                showMortgagePanel
+                  ? h(
+                      "div",
+                      {
+                        className: "team-panel team-panel--mortgage",
+                        key: "mortgage-panel",
+                        "data-id": "team-panel-mortgage",
+                      },
+                      [
+                        h(
+                          "div",
+                          {
+                            className: "team-panel__vertical team-panel__vertical--mortgage",
+                            key: "mortgage-label",
+                          },
+                          "Hipotecario",
+                        ),
+                        h(
+                          "div",
+                          {
+                            className: "team-mortgage-stack",
+                            key: "mortgage-content",
+                          },
+                          renderMortgagePlaceholders(data.mortgage, 0),
+                        ),
+                      ],
+                    )
+                  : null,
+                h(
+                  "div",
+                  buildRevealProps("team-panel team-panel--ia", fragmentsEnabled, 3, {
+                    key: "ia-panel",
+                    "data-id": "team-panel-ia",
+                  }),
+                  [
+                    h(
+                      "div",
+                      {
+                        className: "team-panel__vertical team-panel__vertical--ia",
+                        key: "ia-label",
+                      },
+                      "IA",
+                    ),
+                    h(
+                      "div",
+                      {
+                        className: "team-ia-stack",
+                        key: "ia-content",
+                      },
+                      renderPeople(data.ia, "ia", 4),
+                    ),
+                  ],
+                ),
+                h(
+                  "div",
+                  buildRevealProps("team-panel team-panel--appian", fragmentsEnabled, 2, {
+                    key: "appian-panel",
+                    "data-id": "team-panel-appian",
+                  }),
+                  [
+                    h(
+                      "div",
+                      {
+                        className: "team-panel__vertical team-panel__vertical--appian",
+                        key: "appian-label",
+                      },
+                      "Appian",
+                    ),
+                    h(
+                      "div",
+                      {
+                        className: "team-panel__content team-panel__content--appian",
+                        key: "appian-content",
+                      },
+                      [
+                        h(
+                          "div",
+                          {
+                            className: "team-cluster team-cluster--leads",
+                            key: "leads",
+                          },
+                          renderPeople(data.appianLeads, "lead", 6),
+                        ),
+                        h(
+                          "div",
+                          {
+                            className: "team-grid",
+                            key: "delivery",
+                          },
+                          renderPeople(data.appianDelivery, "delivery", 9),
+                        ),
+                        h(
+                          "div",
+                          {
+                            className: "team-support-row",
+                            key: "hybrid",
+                          },
+                          renderPeople(data.hybrid, "hybrid", 15),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                h(
+                  "div",
+                  buildRevealProps("team-panel team-panel--rpa", fragmentsEnabled, 1, {
+                    key: "rpa-panel",
+                    "data-id": "team-panel-rpa",
+                  }),
+                  [
+                    h(
+                      "div",
+                      {
+                        className: "team-panel__vertical team-panel__vertical--rpa",
+                        key: "rpa-label",
+                      },
+                      "RPA",
+                    ),
+                    h(
+                      "div",
+                      {
+                        className: "team-panel__content team-panel__content--rpa",
+                        key: "rpa-content",
+                      },
+                      renderPeople(data.rpaMembers, "rpa-member", 16),
+                    ),
+                  ],
+                ),
+              ].filter(Boolean),
+            ),
+            h(
+              "div",
+              buildRevealProps("team-foundation", fragmentsEnabled, 4, {
+                key: "foundation",
+                "data-id": "team-foundation",
+              }),
+              [
+                h(
+                  "div",
+                  {
+                    className: "team-foundation__label",
+                    key: "foundation-label",
+                  },
+                  "ARQ",
+                ),
+                h(
+                  "div",
+                  {
+                    className: "team-foundation__content",
+                    key: "foundation-content",
+                  },
+                  [
+                    h(
+                      "div",
+                      {
+                        className: "team-foundation__card",
+                        key: "foundation-card",
+                      },
+                      renderPeople(data.architecture, "arq", 20),
+                    ),
+                    h(
+                      "p",
+                      {
+                        className: "team-foundation__note",
+                        key: "foundation-note",
+                      },
+                      data.architectureNote,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    );
   }
 
-  if (typeof ReactDOMInstance.render === "function") {
-    ReactDOMInstance.render(rosterElement, teamRosterRoot);
-  }
+  teamRosterRoots.forEach((root) => {
+    const variant = root.dataset.teamRosterRoot === "mortgage" ? "mortgage" : "base";
+    const rosterElement = h(TeamRoster, {
+      data: TEAM_ROSTER_DATA,
+      variant,
+    });
+
+    if (typeof ReactDOMInstance.createRoot === "function") {
+      ReactDOMInstance.createRoot(root).render(rosterElement);
+      return;
+    }
+
+    if (typeof ReactDOMInstance.render === "function") {
+      ReactDOMInstance.render(rosterElement, root);
+    }
+  });
 }
 
 function injectSlideReferences() {

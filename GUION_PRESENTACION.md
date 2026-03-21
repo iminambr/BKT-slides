@@ -13,12 +13,12 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 #### C01 · Eyebrow
 - Tipo: eyebrow
 - Posicion: parte superior izquierda
-- Texto exacto: `Bankinter · Appian · Storyline 2025`
+- Texto exacto: `Bankinter · Appian · Business Plan`
 
 #### C02 · Titular principal
 - Tipo: titular principal
 - Posicion: centro izquierda
-- Texto exacto: `Bankinter Appian`
+- Texto exacto: `Bankinter`
 
 #### C03 · Bajada principal
 - Tipo: bajada
@@ -29,23 +29,23 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 #### C05 · Metrica 1
 - Tipo: pastilla de metrica
 - Posicion: debajo del bloque de texto principal. Bastante grande, porque es uno de los datos importantes a mostrar.
-- Valor exacto: `+15`
-- Etiqueta exacta: `procesos Appian desplegados`
-- Animación: Debe aparecer por fragmentos y el numero debe contar rapidamente desde `+0` hasta el valor final.
+- Valor exacto: `18`
+- Etiqueta exacta: `procesos de Appian desplegados`
+- Animación: Debe aparecer por fragmentos y el numero debe contar rapidamente desde `0` hasta el valor final.
 
 #### C06 · Metrica 2
 - Tipo: pastilla de metrica
 - Posicion: debajo del bloque de texto principal. Bastante grande, porque es uno de los datos importantes a mostrar.
-- Valor exacto: `+2`
-- Etiqueta exacta: `nuevos directores implicados`
-- Animación: Debe aparecer por fragmentos y el numero debe contar rapidamente desde `+0` hasta el valor final.
+- Valor exacto: `3`
+- Etiqueta exacta: `Directores de Transformación Digital implicados`
+- Animación: Debe aparecer por fragmentos y el numero debe contar rapidamente desde `0` hasta el valor final.
 
 #### C07 · Metrica 3
 - Tipo: pastilla de metrica
 - Posicion: debajo del bloque de texto principal. Bastante grande, porque es uno de los datos importantes a mostrar.
-- Valor exacto: `+15`
-- Etiqueta exacta: `crecimiento del equipo`
-- Animación: Debe aparecer por fragmentos y el numero debe contar rapidamente desde `+0` hasta el valor final.
+- Valor exacto: `21`
+- Etiqueta exacta: `personas en el equipo`
+- Animación: Debe aparecer por fragmentos y el numero debe contar rapidamente desde `0` hasta el valor final.
 
 #### C08 · Boton de pantalla completa
 - Tipo: boton
@@ -58,16 +58,16 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Texto exacto: Incluir aqui en todo su tamaño la imagen 'imagenes\chica_tarjeta.png'
 
 
-## S02 · Timeline secuencial
+## S05 · Timeline secuencial
 
 ### Referencias visuales
 - Archivo en `imagenes/`:
 - Uso previsto: reinterpretar el borrador de timeline aportado en chat como una secuencia Reveal que se lee como un unico recorrido ejecutivo, con un eje horizontal real y tarjetas de detalle alrededor del quarter activo.
 
 ### Comportamiento
-- La `S02` se compone de 5 estados full-screen visualmente continuos.
+- La `S05` se compone de 7 estados full-screen visualmente continuos.
 - Al avanzar con flecha abajo o scroll debe recorrerse, en este orden: `2024 Q4`, `2025 Q1`, `2025 Q2`, `2025 Q3`, `2025 Q4`, `2026 Q1`, `2026 Q2`.
-- El rail lateral debe tratar toda la secuencia como una unica parada `S02`.
+- El rail lateral debe tratar toda la secuencia como una unica parada `S05`.
 - Cada estado mantiene la misma composicion general y anima el eje temporal desde el quarter anterior hasta el quarter activo.
 - El quarter activo debe quedar centrado sobre el eje en todos los estados.
 
@@ -260,7 +260,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 
 
 
-## S03 · Resumen ejecutivo
+## S02 · Resumen ejecutivo
 
 ### Referencias visuales
 - Archivo en `imagenes/`:
@@ -286,9 +286,9 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 #### C04 · Tarjeta de metrica 1
 - Tipo: tarjeta de metrica
 - Posicion: grid central, columna 1
-- Label exacta: `Revenue`
-- Valor exacto: `545.000 €`
-- Texto exacto: `De los cuales 175k solo en el último trimestre y con crecimiento exponencial.`
+- Label exacta: `Revenue YTD Febrero`
+- Valor exacto: `673.839 €`
+- Texto exacto: `Cifra acumulada hasta febrero, ya como séptima cuenta por volumen en Enterprise Optimization.`
 
 #### C05 · Tarjeta de metrica 2
 - Tipo: tarjeta de metrica
@@ -301,7 +301,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Tipo: tarjeta de metrica
 - Posicion: grid central, columna 3
 - Label exacta: `Tamaño del equipo`
-- Valor exacto: `16`
+- Valor exacto: `21`
 - Texto exacto: `Combinacion de delivery, arquitectura, analisis funcional y gobierno. Todo gestionado por squads.`
 
 #### C07 · Tarjeta de metrica 4
@@ -323,7 +323,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Label exacta: `Lectura ejecutiva`
 - Texto exacto: `Farmear ingreso, es casi tan importante (o más) que las oportunidades comerciales singulares.`
 
-## S04 · Revenue
+## S06 · Revenue
 
 ### Referencias visuales
 - Capturas facilitadas en la conversacion, no almacenadas en `imagenes/`.
@@ -350,7 +350,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Tipo: tarjeta principal
 - Posicion: mitad izquierda
 - Label exacta: `Bankinter - NR`
-- Titulo exacto: `Revenue mensual`
+- Titulo exacto: `Revenue mensual Appian`
 
 #### C05 · KPIs dentro del panel izquierdo
 - Tipo: tira de metricas
@@ -395,7 +395,7 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
   - `Madrid Digital Empleo` | `709.345 €` | `28,9 %`
   - `Bankinter` | `673.839 €` | `44,2 %`
 
-## S05 · Organizacion BKT · Semilla
+## S03 · Organizacion BKT · Semilla
 
 ### Referencias visuales
 - Fuente: borrador compartido por el usuario con organigrama de sistemas y esquema de orbita.
@@ -470,10 +470,11 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Posicion: anillo interior del panel derecho
 - Texto exacto: `Espana`
 
-## S06 · Organizacion BKT · Expansion
+## S03 · Organizacion BKT · Expansion
 
 ### Referencias visuales
-- Fuente: misma base visual y misma geometria que `S05`, para transicionar con auto-animate.
+- Fuente: misma base visual y misma geometria que `S03 · Organizacion BKT · Semilla`, manteniendo familia visual con la slide anterior.
+- Orden exacto: esta slide va inmediatamente despues de `S03 · Organizacion BKT · Semilla`, para que la lectura sea claramente de antes y despues.
 - Uso previsto: hacer aparecer el resto de responsables, areas y geografias sin mover el layout.
 
 ### Componentes
@@ -570,11 +571,18 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
   - `Irlanda`
   - `BKCF`
 
-## S07 · Equipo completo
+## S04 · Equipo completo
 
 ### Referencias visuales
 - Archivo en `imagenes/`:
 - Uso previsto: reinterpretar la referencia de organigrama aportada en chat como una slide clara, integrada con el deck y renderizada con componentes React.
+- Comportamiento: en la secuencia real del deck va inmediatamente despues de `S07`, para reforzar la lectura de antes y despues.
+- Fragmentos exactos al avanzar:
+  - Paso 1: `Arturo Cercadillo` + banda `Cross`
+  - Paso 2: caja `RPA`
+  - Paso 3: caja `Appian`
+  - Paso 4: caja `IA`
+  - Paso 5: base `ARQ`
 
 ### Componentes
 
@@ -588,16 +596,16 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Posicion: parte superior izquierda
 - Texto exacto: `El equipo Bankinter ya se percibe como una capacidad completa, no como una suma de perfiles.`
 
-#### C03 · Caption superior
-- Tipo: caption
-- Posicion: parte superior derecha
-- Texto exacto: `Slide exploratoria para visualizar todo el equipo que sostiene el delivery en Bankinter.`
+#### C03 · Nodo superior
+- Tipo: tarjeta destacada de liderazgo
+- Posicion: centrado sobre el organigrama principal
+- Nombre exacto: `Arturo Cercadillo`
 
 #### C04 · Banda Cross
 - Tipo: banda con tarjetas de personas
-- Posicion: franja superior del organigrama
+- Posicion: franja superior del organigrama principal
 - Label exacta: `Cross`
-- Nombres exactos: `Arturo Cercadillo`, `Stefania Talpa`, `Sofia Pons`
+- Nombres exactos: `Stefania Talpa`, `Sofia Pons`, `Curro Arroyo Cerezo`
 
 #### C05 · Panel IA
 - Tipo: panel lateral
@@ -621,256 +629,331 @@ Este fichero es el configurador exacto slide a slide. Cualquier texto visible, n
 - Posicion: panel principal derecho, franja inferior
 - Nombre exacto: `Mercedes Suarez`
 
-#### C09 · Base de arquitectura
+#### C09 · Bloque RPA
+- Tipo: panel de equipo integrado en el organigrama principal
+- Posicion: tercer panel dentro de la caja principal, al mismo nivel que IA y Appian
+- Label exacta: `RPA`
+- Equipo exacto: `Jose Javier Vargas`, `Virginia Campayo`, `Sergio Montes`, `Juan Jose Lopez`
+- Nota de composicion: `Jose Javier Vargas` se representa con una tarjeta ligeramente mas oscura para marcar liderazgo del squad
+
+#### C10 · Base de arquitectura
 - Tipo: banda inferior
 - Posicion: base del organigrama
 - Label exacta: `ARQ`
 - Nombre exacto: `Tomas Redondo`
 - Texto exacto: `Base de arquitectura e integracion que sostiene el delivery y la escalabilidad del modelo.`
 
-## S08 · Q3
+## S04 · Equipo completo · Hipotecario
 
 ### Referencias visuales
-- Archivo en `imagenes/`:
-- Uso previsto:
+- Archivo en `imagenes/`: referencia compartida por el usuario en chat con una nueva caja de `Hipotecario`.
+- Uso previsto: mostrar la siguiente foto del mismo equipo, manteniendo el titular y haciendo visible la expansion a un nuevo ambito.
+- Comportamiento: debe entrar justo despues de la `S04` actual, compartiendo el mismo identificador visible `S04` y con transicion suave entre ambas.
 
 ### Componentes
 
 #### C01 · Eyebrow
 - Tipo: eyebrow
 - Posicion: parte superior izquierda
-- Texto exacto: `Tramo 3`
+- Texto exacto: `Capacidad instalada`
 
 #### C02 · Titular principal
 - Tipo: titular principal
 - Posicion: parte superior izquierda
-- Texto exacto: `Q3 · Expandir el patrocinio`
+- Texto exacto: `El equipo Bankinter ya se percibe como una capacidad completa, no como una suma de perfiles.`
 
-#### C03 · KPI 1
-- Tipo: tarjeta KPI
-- Posicion: parte superior derecha
-- Label exacta: `Procesos acumulados`
-- Valor exacto: `24`
+#### C03 · Organigrama evolucionado
+- Tipo: misma base de organigrama de la `S04` anterior
+- Posicion: cuerpo principal de la slide
+- Contenido exacto: se mantienen `Arturo Cercadillo`, la banda `Cross`, las cajas `IA`, `Appian`, `RPA` y la base `ARQ` con el mismo contenido.
 
-#### C04 · KPI 2
-- Tipo: tarjeta KPI
-- Posicion: parte superior derecha
-- Label exacta: `Directores activos`
-- Valor exacto: `7`
+#### C04 · Nueva caja Hipotecario
+- Tipo: panel nuevo integrado en el organigrama principal
+- Posicion: dentro del cuadro blanco principal, bajo la banda `Cross` y al mismo nivel que `IA`, `Appian` y `RPA`
+- Label exacta: `Hipotecario`
+- Estilo exacto: misma logica visual que `IA`, pero con fondo morado muy suave y label vertical.
+- Composicion exacta: cuatro perfiles sin nombre todavia, con icono de persona y sin texto visible.
+- Codigo de color exacto:
+  - dos naranjas para representar talento que llega desde `Appian`
+  - verde para representar talento que llega desde `IA`
+- amarillo para representar talento que llega desde `RPA`
+- Intencion narrativa exacta: `Hipotecario` no nace como caja aislada, sino como nueva capacidad que combina talento redistribuido desde ambitos ya existentes.
 
-#### C05 · KPI 3
-- Tipo: tarjeta KPI
-- Posicion: parte superior derecha
-- Label exacta: `Equipo`
-- Valor exacto: `13`
+## S04 · Proceso ejemplo
 
-#### C06 · Quote
-- Tipo: quote card
+### Referencias visuales
+- Referencia: composicion compartida por el usuario con caso `Bastanteos con IA`, KPIs a la izquierda y demostracion visual del modelo a la derecha.
+- Uso previsto: convertir una slide de ejemplo de proceso en el mismo lenguaje del deck, con foco ejecutivo en valor, control y trazabilidad.
+- Comportamiento: debe ir justo detras del bloque de equipo y antes de la timeline, pero mantenerse dentro del mismo tramo visual `S04` para no renumerar el relato.
+
+### Componentes
+
+#### C01 · Titular
+- Tipo: bloque de apertura
 - Posicion: columna izquierda
-- Texto exacto: `“La velocidad hace visible el valor. Y cuando el valor se ve, la demanda se multiplica.”`
+- Eyebrow exacta: `Proceso ejemplo`
+- Texto exacto: `Bastanteos con IA: menos friccion operativa, mismo control.`
+- Subtexto exacto: `La IA clasifica y pre-rellena; Appian/ARGO orquesta; el experto valida con evidencia sobre el PDF.`
 
-#### C07 · Focus card
+#### C02 · KPIs del caso
+- Tipo: grid 2x2 de metricas
+- Posicion: columna izquierda
+- Valores exactos:
+  - `70k` -> `operaciones / año`
+  - `50+` -> `tipologías / documentales`
+  - `80+` -> `facultades / a interpretar`
+  - `299k€` -> `ahorro potencial / máximo`
+
+#### C03 · Callout de lectura
+- Tipo: callout oscuro
+- Posicion: parte inferior izquierda
+- Texto exacto: `Industrializamos un proceso jurídico crítico sin automatización ciega.`
+
+#### C04 · Panel principal del modelo
+- Tipo: gran panel visual
+- Posicion: columna derecha
+- Tag exacta: `Como se ve el modelo`
+- Mensaje exacto: `Lo diferencial: la persona valida cada atributo sobre la evidencia del documento.`
+
+#### C05 · Vista operativa superior
+- Tipo: comparativa documento + formulario
+- Posicion: parte superior del panel principal
+- Composicion exacta:
+  - mock de PDF con evidencias resaltadas
+  - mock de formulario estructurado con campos pre-rellenados
+  - conexion visual entre ambos
+
+#### C06 · Flujo inferior
+- Tipo: secuencia horizontal de pasos
+- Posicion: parte media-inferior del panel principal
+- Nodos exactos: `PDF`, `OCR`, `IA`, `VAL`, `ARGO`
+- Lectura exacta:
+  - `PDF`: entrada de documentacion
+  - `OCR`: captura de texto
+  - `IA`: clasificacion y propuesta de atributos
+  - `VAL`: validacion humana sobre evidencia
+  - `ARGO`: integracion y trazabilidad
+
+#### C07 · Pildoras de sintesis
+- Tipo: tres pildoras horizontales
+- Posicion: base del panel principal
+- Textos exactos: `IA prepara`, `humano decide`, `plataforma integra`
+
+## S08 · Competidores
+
+### Referencias visuales
+- Assets locales:
+  - `assets/competitors/vass.png`
+  - `assets/competitors/accenture.svg`
+  - `assets/competitors/ey-logo-black.png`
+  - `assets/competitors/softtek.svg`
+- Uso previsto: slide visual para situar competidores recurrentes en Bankinter cuando la conversación mezcla procesos, transformación y algo de Appian.
+
+### Componentes
+
+#### C01 · Eyebrow
+- Tipo: eyebrow
+- Posicion: parte superior izquierda
+- Texto exacto: `Paisaje competitivo`
+
+#### C02 · Titular principal
+- Tipo: titular principal
+- Posicion: parte superior izquierda
+- Texto exacto: `En Bankinter, el espacio de procesos y Appian se cruza siempre con cuatro nombres reconocibles.`
+
+#### C03 · Nota ejecutiva superior
 - Tipo: tarjeta de mensaje
+- Posicion: parte superior derecha
+- Label exacta: `Lectura ejecutiva`
+- Texto exacto: `VASS, Accenture, EY y Softtek aparecen como referencias recurrentes cuando el banco piensa en capacidad de transformación, industrialización y credibilidad en la cuenta.`
+
+#### C04 · Nota de lectura
+- Tipo: tarjeta de contexto
 - Posicion: columna izquierda
-- Label exacta: `Mensaje que deja`
-- Texto exacto: `Aqui el relato deja de ser tecnico y se vuelve institucional: mas directores, mas casos y una plataforma que empieza a circular por el banco.`
+- Label exacta: `Como leer esta slide`
+- Texto exacto: `No es un ranking cerrado. Es el mapa mental más frecuente cuando Bankinter compara proveedores con conversación real en procesos y algo de tracción en Appian.`
 
-#### C08 · Tarjeta mes 1
-- Tipo: tarjeta de mes
-- Posicion: derecha, columna 1
-- Chip exacto: `Julio`
-- Titular exacto: `Escala visible`
-- Texto exacto: `18 procesos acumulados y entrada de Atencion al Cliente.`
+#### C05 · Nube de temas
+- Tipo: grupo de chips
+- Posicion: columna izquierda
+- Chips exactos:
+  - `Procesos`
+  - `Automatizacion`
+  - `Appian`
+  - `Delivery`
 
-#### C09 · Tarjeta mes 2
-- Tipo: tarjeta de mes
-- Posicion: derecha, columna 2
-- Chip exacto: `Agosto`
-- Titular exacto: `Continuidad`
-- Texto exacto: `Se mantiene la cadencia incluso en verano gracias al modelo de factory.`
+#### C06 · Espacio libre inferior
+- Tipo: aire compositivo
+- Posicion: columna izquierda, parte inferior
+- Nota de composicion: reservar hueco visual para que la slide respire y no se corte en viewport
 
-#### C10 · Tarjeta mes 3
-- Tipo: tarjeta de mes
-- Posicion: derecha, columna 3
-- Chip exacto: `Septiembre`
-- Titular exacto: `Nueva legitimidad`
-- Texto exacto: `24 procesos, 7 directores y backlog compartido con mayor ambicion.`
+#### C07 · Núcleo central
+- Tipo: panel central
+- Posicion: cabecera del bloque visual derecho
+- Label exacta: `Terreno de juego`
+- Titular exacto: `Procesos, BPM y Appian`
+- Texto exacto: `Ahí es donde Bankinter compara presencia, credibilidad y capacidad de ejecución.`
+- Chips exactos:
+  - `Cuenta`
+  - `Delivery`
+  - `Low-code`
 
-## S09 · Q4
+#### C08 · Tarjeta competidor VASS
+- Tipo: tarjeta de competidor con logo
+- Posicion: bloque visual derecho, cuadrante superior izquierdo
+- Nombre exacto: `VASS`
+- Dominio exacto: `Procesos + delivery`
+- Texto exacto: `Presencia visible cuando la conversación baja a fábrica, continuidad operativa y transformación de procesos.`
+
+#### C09 · Tarjeta competidor Accenture
+- Tipo: tarjeta de competidor con logo
+- Posicion: bloque visual derecho, cuadrante superior derecho
+- Nombre exacto: `Accenture`
+- Dominio exacto: `Transformacion a escala`
+- Texto exacto: `Competidor natural cuando el banco busca marca global, capacidad de programa y relato de transformación amplio.`
+
+#### C10 · Tarjeta competidor EY
+- Tipo: tarjeta de competidor con logo
+- Posicion: bloque visual derecho, cuadrante inferior izquierdo
+- Nombre exacto: `EY`
+- Dominio exacto: `Cambio + advisory`
+- Texto exacto: `Entra en la conversación cuando procesos y transformación se conectan con narrativa ejecutiva y sponsorship.`
+
+#### C11 · Tarjeta competidor Softtek
+- Tipo: tarjeta de competidor con logo
+- Posicion: bloque visual derecho, cuadrante inferior derecho
+- Nombre exacto: `Softtek`
+- Dominio exacto: `Capacidad industrial`
+- Texto exacto: `Jugador a tener en cuenta cuando se valora delivery sostenido, escalabilidad y modelo de fábrica.`
+
+## S09 · Presentacion hecha con IA
 
 ### Referencias visuales
-- Archivo en `imagenes/`:
-- Uso previsto:
+- Logos locales en `assets/ai-tools/`: `openai-blossom-mark.svg`, `github-copilot-logo.svg`, `revealjs-logo.svg`
+- Uso previsto: slide explicativa de backstage, en primera version, para contar que el deck nace como producto web y no como PowerPoint cerrado.
+- Direccion visual: variante oscura para abrir contraste en el tramo final de la presentacion.
 
 ### Componentes
 
 #### C01 · Eyebrow
 - Tipo: eyebrow
 - Posicion: parte superior izquierda
-- Texto exacto: `Tramo 4`
+- Texto exacto: `Presentacion hecha con IA`
 
 #### C02 · Titular principal
 - Tipo: titular principal
 - Posicion: parte superior izquierda
-- Texto exacto: `Q4 · Consolidar la fabrica`
-
-#### C03 · KPI 1
-- Tipo: tarjeta KPI
-- Posicion: parte superior derecha
-- Label exacta: `Procesos acumulados`
-- Valor exacto: `32`
-
-#### C04 · KPI 2
-- Tipo: tarjeta KPI
-- Posicion: parte superior derecha
-- Label exacta: `Directores activos`
-- Valor exacto: `8`
-
-#### C05 · KPI 3
-- Tipo: tarjeta KPI
-- Posicion: parte superior derecha
-- Label exacta: `Equipo`
-- Valor exacto: `16`
-
-#### C06 · Quote
-- Tipo: quote card
-- Posicion: columna izquierda
-- Texto exacto: `“A cierre de ano ya no estamos defendiendo el modelo. Estamos gestionando su siguiente nivel de escala.”`
-
-#### C07 · Focus card
-- Tipo: tarjeta de mensaje
-- Posicion: columna izquierda
-- Label exacta: `Mensaje que deja`
-- Texto exacto: `El cierre debe sentirse maduro: mas gobierno, mas reutilizacion y una sensacion clara de capacidad instalada, no de esfuerzo puntual.`
-
-#### C08 · Tarjeta mes 1
-- Tipo: tarjeta de mes
-- Posicion: derecha, columna 1
-- Chip exacto: `Octubre`
-- Titular exacto: `Governance reforzado`
-- Texto exacto: `Se incorporan Cumplimiento y un backlog con priorizacion conjunta.`
-
-#### C09 · Tarjeta mes 2
-- Tipo: tarjeta de mes
-- Posicion: derecha, columna 2
-- Chip exacto: `Noviembre`
-- Titular exacto: `Capacidad reconocible`
-- Texto exacto: `30 procesos acumulados y operating model mas robusto.`
-
-#### C10 · Tarjeta mes 3
-- Tipo: tarjeta de mes
-- Posicion: derecha, columna 3
-- Chip exacto: `Diciembre`
-- Titular exacto: `Cierre con narrativa`
-- Texto exacto: `32 procesos, 16 personas y un roadmap que ya apunta al siguiente ano.`
-
-## S10 · Stakeholders
-
-### Referencias visuales
-- Archivo en `imagenes/`:
-- Uso previsto:
-
-### Componentes
-
-#### C01 · Eyebrow
-- Tipo: eyebrow
-- Posicion: parte superior izquierda
-- Texto exacto: `Expansion del patrocinio`
-
-#### C02 · Titular principal
-- Tipo: titular principal
-- Posicion: parte superior izquierda
-- Texto exacto: `Los stakeholders dejan de ser una lista y pasan a ser una red.`
+- Texto exacto: `De una conversacion a un deck navegable y editable.`
 
 #### C03 · Caption superior
 - Tipo: caption
 - Posicion: parte superior derecha
-- Texto exacto: `Buena slide para mostrar que el valor ya no depende de un solo sponsor.`
+- Texto exacto: `ChatGPT ayuda a sintetizar el relato, Codex ejecuta cambios end-to-end sobre el deck, GitHub Copilot acelera remates de codigo y reveal.js pone el motor de navegacion.`
 
-#### C04 · Nucleo del diagrama
-- Tipo: diagrama de orbita
-- Posicion: izquierda
-- Texto exacto: `Appian Factory`
+#### C04 · Tarjeta ChatGPT
+- Tipo: tarjeta de herramienta
+- Posicion: grid izquierda, fila 1 columna 1
+- Nombre exacto: `ChatGPT`
+- Label exacta: `Narrativa`
+- Texto exacto: `Ordena el storyline, resume ideas y ayuda a convertir notas sueltas en mensajes ejecutivos.`
 
-#### C05 · Nodos del diagrama
-- Tipo: nodos orbitando
-- Posicion: izquierda
-- Etiquetas exactas: `Operaciones`, `Riesgos`, `Banca Digital`, `Canales`, `Atencion Cliente`, `Cumplimiento`, `Calidad`, `Transformacion`
+#### C05 · Tarjeta Codex
+- Tipo: tarjeta de herramienta
+- Posicion: grid izquierda, fila 1 columna 2
+- Nombre exacto: `Codex`
+- Label exacta: `Implementacion`
+- Texto exacto: `Aplica cambios reales en HTML, CSS y JS, reordena slides, ajusta layout y valida el resultado.`
 
-#### C06 · Insight 1
-- Tipo: tarjeta insight
-- Posicion: derecha
-- Label exacta: `Senal de madurez`
-- Texto exacto: `La mejor prueba de exito no es el numero bruto de entregas, sino la variedad de areas que empiezan a pedir el mismo modelo.`
+#### C06 · Tarjeta GitHub Copilot
+- Tipo: tarjeta de herramienta
+- Posicion: grid izquierda, fila 2 columna 1
+- Nombre exacto: `GitHub Copilot`
+- Label exacta: `Aceleracion`
+- Texto exacto: `Sirve de apoyo para snippets, remates repetitivos y pequenas iteraciones sobre el codigo.`
 
-#### C07 · Insight 2
-- Tipo: tarjeta insight
-- Posicion: derecha
-- Label exacta: `Como contarlo`
-- Texto exacto: `“En enero teniamos un sponsor. En diciembre teniamos una red de directores que ya usaban Appian como palanca de simplificacion.”`
+#### C07 · Tarjeta reveal.js
+- Tipo: tarjeta de herramienta
+- Posicion: grid izquierda, fila 2 columna 2
+- Nombre exacto: `reveal.js`
+- Label exacta: `Motor`
+- Texto exacto: `Convierte todo lo anterior en una presentacion web: scroll, rail lateral, fragments y navegacion.`
 
-#### C08 · Insight stat
-- Tipo: dato resumen
-- Posicion: derecha
-- Valor exacto: `8`
-- Texto exacto: `direcciones implicadas al cierre`
+#### C08 · Panel derecho
+- Tipo: panel explicativo
+- Posicion: columna derecha
+- Titulo exacto: `Secuencia de trabajo`
+- Eyebrow exacta: `Como se llega`
 
-## S11 · Equipo
+#### C09 · Paso 1
+- Tipo: paso de proceso
+- Posicion: panel derecho
+- Numero exacto: `01`
+- Titulo exacto: `Guion y mensaje`
+- Texto exacto: `Se parte de notas, feedback y objetivos. ChatGPT ayuda a compactar la historia y a definir el titular de cada slide.`
+
+#### C10 · Paso 2
+- Tipo: paso de proceso
+- Posicion: panel derecho
+- Numero exacto: `02`
+- Titulo exacto: `Construccion del deck`
+- Texto exacto: `Codex aterriza la propuesta en el proyecto real: HTML, CSS, JS, orden de slides, rail y validacion local.`
+
+#### C11 · Paso 3
+- Tipo: paso de proceso
+- Posicion: panel derecho
+- Numero exacto: `03`
+- Titulo exacto: `Pulido y entrega`
+- Texto exacto: `Copilot acelera ajustes pequenos y reveal.js deja una presentacion versionable, navegable y facil de iterar.`
+
+#### C12 · Nota final
+- Tipo: callout de cierre
+- Posicion: parte inferior del panel derecho
+- Label exacta: `Resultado`
+- Texto exacto: `Una presentacion que no nace en PowerPoint: nace como producto web, editable en Git y afinable por iteraciones cortas.`
+
+## S10 · Cierre
 
 ### Referencias visuales
-- Archivo en `imagenes/`:
-- Uso previsto:
+- Assets locales:
+  - `assets/bankinter-wordmark-official.png`
+  - `assets/ntt-data-wordmark.svg`
+- Uso previsto: cierre visual de tono ejecutivo con fondo oscuro, logos visibles y una composicion abstracta tipo horizonte para rematar la presentacion sin volver a una slide de texto.
 
 ### Componentes
 
 #### C01 · Eyebrow
 - Tipo: eyebrow
 - Posicion: parte superior izquierda
-- Texto exacto: `Equipo y operating model`
+- Texto exacto: `Cierre`
 
 #### C02 · Titular principal
 - Tipo: titular principal
 - Posicion: parte superior izquierda
-- Texto exacto: `Escalar entregas tambien es escalar el sistema que las hace repetibles.`
+- Texto exacto: `Seguimos construyendo la siguiente escala.`
 
-#### C03 · Caption superior
-- Tipo: caption
-- Posicion: parte superior derecha
-- Texto exacto: `Slide util para conectar crecimiento del equipo con mejora de la capacidad.`
+#### C03 · Lead
+- Tipo: texto de cierre
+- Posicion: parte superior izquierda
+- Texto exacto: `Bankinter y NTT DATA llegan a este punto con una capacidad Appian ya visible: mas industrial, mas transversal y lista para el siguiente salto.`
 
-#### C04 · Encabezado del grafico
-- Tipo: encabezado de grafico
-- Posicion: izquierda
-- Label exacta: `Evolucion del equipo`
-- Valor exacto: `7 → 16 personas`
+#### C04 · Logo Bankinter
+- Tipo: tarjeta de logo
+- Posicion: columna izquierda
+- Asset exacto: `assets/bankinter-wordmark-official.png`
 
-#### C05 · Barras del grafico
-- Tipo: grafico de barras
-- Posicion: izquierda
-- Valores exactos: `ENE 7`, `MAR 8`, `MAY 9`, `JUL 11`, `SEP 13`, `DIC 16`
+#### C05 · Logo NTT DATA
+- Tipo: tarjeta de logo
+- Posicion: columna izquierda
+- Asset exacto: `assets/ntt-data-wordmark.svg`
 
-#### C06 · Tarjeta operating model 1
-- Tipo: tarjeta
-- Posicion: derecha
-- Label exacta: `Discovery`
-- Texto exacto: `Priorizacion y framing mas rapidos, con menos ida y vuelta entre areas.`
+#### C06 · Visual abstracto
+- Tipo: composicion de cierre
+- Posicion: columna derecha
+- Direccion visual exacta: horizonte oscuro con glow naranja, glow azul, reticula sutil y panel glass final.
 
-#### C07 · Tarjeta operating model 2
-- Tipo: tarjeta
-- Posicion: derecha
-- Label exacta: `Delivery`
-- Texto exacto: `Plantillas, componentes y cadencia de releases para sostener velocidad.`
-
-#### C08 · Tarjeta operating model 3
-- Tipo: tarjeta
-- Posicion: derecha
-- Label exacta: `Governance`
-- Texto exacto: `Visibilidad ejecutiva, cartera priorizada y ownership mas claro.`
-
-#### C09 · Tarjeta operating model 4
-- Tipo: tarjeta
-- Posicion: derecha
-- Label exacta: `Adopcion`
-- Texto exacto: `El valor se hace visible en distintas direcciones, no solo en tecnologia.`
-
-## S12 · Cierre
+#### C07 · Glass card
+- Tipo: tarjeta superpuesta sobre el visual
+- Posicion: parte inferior del visual
+- Label exacta: `2026`
+- Titular exacto: `Next scale`
+- Texto exacto: `Appian, IA y delivery industrial como capacidad ya reconocible en la cuenta.`
